@@ -1,0 +1,7 @@
+[
+  {
+    "file": "Intel-MKLML-license.txt",
+    "upstream": "https://paddlepaddledeps.bj.bcebos.com/mklml_win_2019.0.5.20190502.zip",
+    "member": "mklml_win_2019.0.5.20190502/license.txt"
+  }
+]

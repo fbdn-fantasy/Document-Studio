@@ -1,0 +1,294 @@
+{
+  "models": [
+    {
+      "model": "PP-DocLayout-M",
+      "directory": "ocr/models/Doc Layout",
+      "license": "Apache-2.0 (supplied model card)",
+      "files": [
+        {
+          "name": "config.json",
+          "bytes": 4715,
+          "sha256": "9df54fc342938f75aede57997c751e9868c7ce502a42eba9716dbfdcec6abfa9"
+        },
+        {
+          "name": "inference.json",
+          "bytes": 390085,
+          "sha256": "5b2ec6d403904d40b21ba261ad6d1a41e12e3fab256d075c1c7362d4742a8fb7"
+        },
+        {
+          "name": "inference.pdiparams",
+          "bytes": 23370814,
+          "sha256": "f374bb0269d91ab2eed393a5a2da6d73d98896ac5eeae4f9f585eba19bcbba74"
+        },
+        {
+          "name": "inference.yml",
+          "bytes": 1579,
+          "sha256": "76aeb103310f432ea773d4a6d187e15b26d92c051c5e2875598e1d49f725d70d"
+        },
+        {
+          "name": "README (1).md",
+          "bytes": 7365,
+          "sha256": "d5a6854aac16fe4b9598419aa760511566657fea12b44695761c391ace9a0221"
+        }
+      ]
+    },
+    {
+      "model": "PP-FormulaNet_plus-S",
+      "directory": "ocr/models/Formulanet plus s",
+      "license": "Apache-2.0 (supplied model card)",
+      "files": [
+        {
+          "name": "config.json",
+          "bytes": 3951676,
+          "sha256": "ddf1f951ceeb10c2b9de3ae255b62de59299b1028f87878177e86c9604fe3610"
+        },
+        {
+          "name": "inference.json",
+          "bytes": 506956,
+          "sha256": "01238434e33df83588e2627f350559b576e34551d2b2ffea148345032de56c00"
+        },
+        {
+          "name": "inference.pdiparams",
+          "bytes": 256845006,
+          "sha256": "e464f94412feaa98f8791eacc84684f887b3569e30e80c52b8112e9cf7d4069b"
+        },
+        {
+          "name": "inference.yml",
+          "bytes": 2244564,
+          "sha256": "96062655d94c21d39274328dbc82c1a487e66addb8425f5a7fd5b7dfb2421ec3"
+        },
+        {
+          "name": "README.md",
+          "bytes": 20557,
+          "sha256": "a87ec34da0925e6ad3e4e80b426dc58cfce2fc6d196261650c1c988bcf9e2a0a"
+        }
+      ]
+    },
+    {
+      "model": "PP-LCNet_x1_0_doc_ori",
+      "directory": "ocr/models/LC Net Doc Orientation",
+      "license": "Apache-2.0 (supplied model card)",
+      "files": [
+        {
+          "name": "config.json",
+          "bytes": 2561,
+          "sha256": "e49f6be2fe4034232b05fb80d983a7b9bde4592d4a52812129c9a348057d3147"
+        },
+        {
+          "name": "inference.json",
+          "bytes": 104441,
+          "sha256": "3580978602f309c3554508dd85d4fe09b73a7e0d80d7f9e63258f5b72c390c69"
+        },
+        {
+          "name": "inference.pdiparams",
+          "bytes": 6754166,
+          "sha256": "e8d6e7c5d264507e40e58a655779059d616b20d7441ea22047d829eb3931989c"
+        },
+        {
+          "name": "inference.yml",
+          "bytes": 766,
+          "sha256": "9e195eb729a8173588cd0e8a852c8b373aa606e79e77b4ac7d8346f5426caf26"
+        },
+        {
+          "name": "README.md",
+          "bytes": 6850,
+          "sha256": "e38ea9c16eba0e14e12216418085e8974481d7c0fc3aed4e7df5cf1869c2c97a"
+        }
+      ]
+    },
+    {
+      "model": "PP-OCRv5_mobile_det",
+      "directory": "ocr/models/Mobile Det",
+      "license": "Apache-2.0 (supplied model card)",
+      "files": [
+        {
+          "name": "config (1).json",
+          "bytes": 2871,
+          "sha256": "7ac1c33f377ba58561f4b89d3180b6add2b7c5c60a4edac90fa4e0ceccdc6665"
+        },
+        {
+          "name": "inference.json",
+          "bytes": 229777,
+          "sha256": "05feef1acb00aa4cd7362b15f7f501fc4f99d7b1fa73c1c871e0c7b1504b0f5c"
+        },
+        {
+          "name": "inference.pdiparams",
+          "bytes": 4692937,
+          "sha256": "afa1820cb16c1fd0dad589d0f8b389139061c1ef6d68019685fd07be997dda5b"
+        },
+        {
+          "name": "inference.yml",
+          "bytes": 903,
+          "sha256": "98069072e1b6b37d727fd9d9f11725faa46d6ea0de012f2ed26caea011c37699"
+        },
+        {
+          "name": "README.md",
+          "bytes": 16243,
+          "sha256": "4cc20ad6d41af86b3ce9885ffb0956e152574a2eb14179aeb07fd2d3956161ca"
+        }
+      ]
+    },
+    {
+      "model": "PP-OCRv5_mobile_rec",
+      "directory": "ocr/models/Mobile Rec",
+      "license": "Apache-2.0 (supplied model card)",
+      "files": [
+        {
+          "name": "config.json",
+          "bytes": 352253,
+          "sha256": "6df1587ae056f0b987125fc894b17f62ae3a12644fa2488d108f19377da9c1a8"
+        },
+        {
+          "name": "inference.json",
+          "bytes": 217724,
+          "sha256": "24587345250c7332d0fc6f9a44e794d078cdaeb64c302fef906f325619de2569"
+        },
+        {
+          "name": "inference.pdiparams",
+          "bytes": 16458665,
+          "sha256": "2460da90875937c94db97eba74ae3d9e5d4c4c57c42f1f41531c09a26bcc771a"
+        },
+        {
+          "name": "inference.yml",
+          "bytes": 148345,
+          "sha256": "5dfeb2777f6d0db8177d8128a8acfcf6e6276dc4ac73ea3bf0dc06d6a5e85d8e"
+        },
+        {
+          "name": "README (1).md",
+          "bytes": 16075,
+          "sha256": "b02727443cef4904a9ee12accdfaf66fcbada7b93a1a05c40dde7582291ba28c"
+        }
+      ]
+    },
+    {
+      "model": "SLANeXt_wired",
+      "directory": "ocr/models/Slanext wired",
+      "license": "Apache-2.0 (supplied model card)",
+      "files": [
+        {
+          "name": "config.json",
+          "bytes": 4948,
+          "sha256": "1379eb21de34e69e3c5e68492304751db7f139037487c2c62133cdb22233993d"
+        },
+        {
+          "name": "inference.json",
+          "bytes": 959302,
+          "sha256": "5b872f08e74f628ca1db8405db147e82e6e0c7cb358e101fd01cdafc946632d8"
+        },
+        {
+          "name": "inference.pdiparams",
+          "bytes": 364771513,
+          "sha256": "ff0362a30f707fa7d27d8453c4396b992fca287377a42d01515bca6eeb3908f5"
+        },
+        {
+          "name": "inference.yml",
+          "bytes": 2066,
+          "sha256": "abbbd1b4dc6b1a2e9cd34c035514da53a1a6b1ec267292b0b8802025650a33bf"
+        },
+        {
+          "name": "README (1).md",
+          "bytes": 12912,
+          "sha256": "6e5529b446ac4ece9afdbabc006407b849171921a0687665199ca6be06fdc504"
+        }
+      ]
+    },
+    {
+      "model": "SLANeXt_wireless",
+      "directory": "ocr/models/Slanext wireless",
+      "license": "Apache-2.0 (supplied model card)",
+      "files": [
+        {
+          "name": "config (1).json",
+          "bytes": 4951,
+          "sha256": "af459c24c87f3af37d6515f4a875b120d5da53ae61152514e1831d80f21c3387"
+        },
+        {
+          "name": "inference.json",
+          "bytes": 959302,
+          "sha256": "5b872f08e74f628ca1db8405db147e82e6e0c7cb358e101fd01cdafc946632d8"
+        },
+        {
+          "name": "inference.pdiparams",
+          "bytes": 364771513,
+          "sha256": "6bf0568e24638491c75920954a92583d8c0d46aa76a2a635fb2fa666ffb618ff"
+        },
+        {
+          "name": "inference.yml",
+          "bytes": 2069,
+          "sha256": "58d1d7fdffd3e58cfec98571b817ea012f2107d644bd4f8e4607fae84f1923a6"
+        },
+        {
+          "name": "README.md",
+          "bytes": 13142,
+          "sha256": "e931fc5d2be31ea6f8518d0b2285e1213b8d68d140380f3a8183763c37ead666"
+        }
+      ]
+    },
+    {
+      "model": "PP-LCNet_x1_0_textline_ori",
+      "directory": "ocr/models/Text Line Orientation",
+      "license": "Apache-2.0 (supplied model card)",
+      "files": [
+        {
+          "name": "config (1).json",
+          "bytes": 2487,
+          "sha256": "c1a2576f9713adabdc4a58d9d654fcc9ea93b6efd0e2d3581d5aab409a33f14f"
+        },
+        {
+          "name": "inference.json",
+          "bytes": 104399,
+          "sha256": "b81929eeaff8e52db0fafb49c9fbfc5bc0572f81641fe0179cc52096323fb4d4"
+        },
+        {
+          "name": "inference.pdiparams",
+          "bytes": 6743918,
+          "sha256": "0de2bcf996cf553e2b848dd7b1769dafffc6917b1ccdf55c1d8efe7909fbf743"
+        },
+        {
+          "name": "inference.yml",
+          "bytes": 735,
+          "sha256": "8d5120d0e1a30a9df7ed46aa9119da3796ed066777089d1c1d705f132d5e90f9"
+        },
+        {
+          "name": "README.md",
+          "bytes": 3554,
+          "sha256": "c2de067422621e296f697b849b90b8f6cae090a8e0a27d8b04eeb8d68ffb8ce0"
+        }
+      ]
+    },
+    {
+      "model": "UVDoc",
+      "directory": "ocr/models/UV Doc",
+      "license": "Apache-2.0 (supplied model card)",
+      "files": [
+        {
+          "name": "config (1).json",
+          "bytes": 1489,
+          "sha256": "0ffdb1f399eee3eb7816fb79b1380f97f89039b955eee2e60d3f7336f6f30875"
+        },
+        {
+          "name": "inference.json",
+          "bytes": 190986,
+          "sha256": "2c2bc3e0f15e782cf8f2ad411b5033d99ca504fe88648f8054a5e925ba2336e0"
+        },
+        {
+          "name": "inference.pdiparams",
+          "bytes": 32054311,
+          "sha256": "810488899520e0da843b9bd9769ba4949f1c81e357f0eceb12d4a7da459c3eca"
+        },
+        {
+          "name": "inference.yml",
+          "bytes": 330,
+          "sha256": "be83d537b358f3ff87740e77e14a83ee9e9a7bb215c33d091b69e8bd5904fe39"
+        },
+        {
+          "name": "README.md",
+          "bytes": 4463,
+          "sha256": "a20104a3a6d1e4c3311e0e1b8f9913a3faf181752376f901fb3f09336dec756f"
+        }
+      ]
+    }
+  ],
+  "runtime": "PaddlePaddle 3.3.1 CPU / PaddleOCR 3.7.0 / PaddleX 3.7.2",
+  "inference": "Paddle inference JSON + pdiparams, CPU, MKLDNN disabled"
+}

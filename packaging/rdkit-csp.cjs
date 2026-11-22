@@ -1,0 +1,7 @@
+// Precompile Emscripten binding factories at build time; renderer CSP still forbids eval.
+const fs=require('fs');const Native=global.Function,entries=new Map();
+global.Function=new Proxy(Native,{construct(target,args){entries.set(JSON.stringify(args.map(String)),args.map(String));return Reflect.construct(target,args);},apply(target,receiver,args){entries.set(JSON.stringify(args.map(String)),args.map(String));return Reflect.apply(target,receiver,args);}});
+(async()=>{const rdkit=await require('@rdkit/rdkit')();for(const source of ['CCO','c1ccccc1','[13CH3][NH3+]','C(C)(C)(C)(C)C']){const m=rdkit.get_mol(source);if(m){m.is_valid();m.get_smiles();m.get_molblock();m.get_svg(600,350);m.get_descriptors();m.delete();}}global.Function=Native;
+const out=[...entries].map(([key,args])=>JSON.stringify(key)+':function('+args.slice(0,-1).join(',')+'){'+args.at(-1)+'}');
+fs.writeFileSync('assets/vendor/rdkit/factories.js','window.FTERDKitFactories={'+out.join(',')+'};');
+let s=fs.readFileSync('node_modules/@rdkit/rdkit/dist/RDKit_minimal.js','utf8');s=s.replace('new Function(args1,invokerFnBody)','FTERDKitFactories[JSON.stringify([String(args1),invokerFnBody])]');s=s.replace('new Function(Object.keys(captures),functionBody)','FTERDKitFactories[JSON.stringify([String(Object.keys(captures)),functionBody])]');if(s.includes('new Function'))throw Error('Unconverted dynamic function');fs.writeFileSync('assets/vendor/rdkit/RDKit_minimal.js',s);console.log('Precompiled '+entries.size+' binding factories.');})().catch(e=>{console.error(e);process.exit(1)});
