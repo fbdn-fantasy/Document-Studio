@@ -1,0 +1,23 @@
+Document Studio for Linux x86_64
+
+This archive installs the document editor, its private Node and Python runtimes,
+and the offline OCR models. Its desktop integration uses GTK 3, WebKitGTK 4.1,
+DBus, OpenSSL 3, fontconfig, OpenGL, the standard C and C++ libraries, OpenMP,
+X11 and XCB from your Linux distribution. This build requires glibc @MIN_GLIBC@
+or later. The RPM and DEB installers list the system packages.
+
+Open a terminal in the extracted directory. To install system-wide, run
+
+    sudo ./install.sh
+
+To install for your own account, run
+
+    ./install.sh "$HOME/.local"
+
+Launch Document Studio from the applications menu or run document-studio
+from the installation prefix's bin directory. For a custom prefix, add its
+bin directory to PATH and its share directory to XDG_DATA_DIRS.
+
+To update a tar installation, close Document Studio and run the new installer
+with the same prefix. It verifies the package checksum before switching versions.
+Installed versions live under lib/document-studio/releases in that prefix.

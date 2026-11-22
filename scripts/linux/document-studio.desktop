@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Document Studio
+Comment=Edit documents and recognize scanned pages offline
+Exec=document-studio %F
+Icon=document-studio
+Terminal=false
+Categories=Office;WordProcessor;
