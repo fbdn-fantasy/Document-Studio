@@ -1,0 +1,207 @@
+{
+  "recordsChecked": 642,
+  "validatedResearchModels": 602,
+  "catalogCount": 611,
+  "excluded": [
+    {
+      "id": "mobley_1235151",
+      "name": "1-nitropentane",
+      "error": "Identity mismatch: CCCCCN([O-])[O-] / CCCCC[N+](=O)[O-]"
+    },
+    {
+      "id": "mobley_1328936",
+      "name": "methyl 4-nitrobenzoate",
+      "error": "Identity mismatch: COC(=O)c1ccc(N([O-])[O-])cc1 / COC(=O)c1ccc([N+](=O)[O-])cc1"
+    },
+    {
+      "id": "mobley_1396156",
+      "name": "pentachloronitrobenzene",
+      "error": "Identity mismatch: [O-]N([O-])c1c(Cl)c(Cl)c(Cl)c(Cl)c1Cl / O=[N+]([O-])c1c(Cl)c(Cl)c(Cl)c(Cl)c1Cl"
+    },
+    {
+      "id": "mobley_1922649",
+      "name": "methylparathion",
+      "error": "Identity mismatch: COP(=S)(OC)Oc1ccc(N([O-])[O-])cc1 / COP(=S)(OC)Oc1ccc([N+](=O)[O-])cc1"
+    },
+    {
+      "id": "mobley_1952272",
+      "name": "nitromethane",
+      "error": "Identity mismatch: CN([O-])[O-] / C[N+](=O)[O-]"
+    },
+    {
+      "id": "mobley_2481002",
+      "name": "trichloro(nitro)methane",
+      "error": "Identity mismatch: [O-]N([O-])C(Cl)(Cl)Cl / O=[N+]([O-])C(Cl)(Cl)Cl"
+    },
+    {
+      "id": "mobley_2501588",
+      "name": "profluralin",
+      "error": "Identity mismatch: CCCN(CC1CC1)c1c(N([O-])[O-])cc(C(F)(F)F)cc1N([O-])[O-] / CCCN(CC1CC1)c1c([N+](=O)[O-])cc(C(F)(F)F)cc1[N+](=O)[O-]"
+    },
+    {
+      "id": "mobley_2636578",
+      "name": "3-nitrooxypropyl nitrate",
+      "error": "Identity mismatch: [O-]N([O-])OCCCON([O-])[O-] / O=[N+]([O-])OCCCO[N+](=O)[O-]"
+    },
+    {
+      "id": "mobley_2725215",
+      "name": "nitralin",
+      "error": "Identity mismatch: CCCN(CCC)c1c(N([O-])[O-])cc(S(C)(=O)=O)cc1N([O-])[O-] / CCCN(CCC)c1c([N+](=O)[O-])cc(S(C)(=O)=O)cc1[N+](=O)[O-]"
+    },
+    {
+      "id": "mobley_2751110",
+      "name": "4-nitrophenol",
+      "error": "Identity mismatch: [O-]N([O-])c1ccc(O)cc1 / O=[N+]([O-])c1ccc(O)cc1"
+    },
+    {
+      "id": "mobley_2881590",
+      "name": "isobutyl nitrate",
+      "error": "Identity mismatch: CC(C)CON([O-])[O-] / CC(C)CO[N+](=O)[O-]"
+    },
+    {
+      "id": "mobley_3210206",
+      "name": "1,2-dinitroxypropane",
+      "error": "Identity mismatch: C[C@@H](CON([O-])[O-])ON([O-])[O-] / C[C@@H](CO[N+](=O)[O-])O[N+](=O)[O-]"
+    },
+    {
+      "id": "mobley_3274817",
+      "name": "2-[(1R)-1-methylpropyl]-4,6-dinitro-phenolate",
+      "error": "Identity mismatch: CC[C@@H](C)c1cc(N([O-])[O-])cc(N([O-])[O-])c1O / CC[C@@H](C)c1cc([N+](=O)[O-])cc([N+](=O)[O-])c1O"
+    },
+    {
+      "id": "mobley_3323117",
+      "name": "sulfolane",
+      "error": "Identity mismatch: O=S1(=O)CCCC1 / [O-][S+2]1([O-])CCCC1"
+    },
+    {
+      "id": "mobley_3802803",
+      "name": "hexyl nitrate",
+      "error": "Identity mismatch: CCCCCCON([O-])[O-] / CCCCCCO[N+](=O)[O-]"
+    },
+    {
+      "id": "mobley_3777264",
+      "name": "3-nitroaniline",
+      "error": "Identity mismatch: Nc1cccc(N([O-])[O-])c1 / Nc1cccc([N+](=O)[O-])c1"
+    },
+    {
+      "id": "mobley_4193752",
+      "name": "nitrobenzene",
+      "error": "Identity mismatch: [O-]N([O-])c1ccccc1 / O=[N+]([O-])c1ccccc1"
+    },
+    {
+      "id": "mobley_4964807",
+      "name": "nitroxyacetone",
+      "error": "Identity mismatch: CC(=O)CON([O-])[O-] / CC(=O)CO[N+](=O)[O-]"
+    },
+    {
+      "id": "mobley_5063386",
+      "name": "2-nitrophenol",
+      "error": "Identity mismatch: [O-]N([O-])c1ccccc1O / O=[N+]([O-])c1ccccc1O"
+    },
+    {
+      "id": "mobley_5076071",
+      "name": "1-N,1-N-diethyl-2,6-dinitro-4-(trifluoromethyl)benzene-1,3-diamine",
+      "error": "Identity mismatch: CCN(CC)c1c(N([O-])[O-])cc(C(F)(F)F)c(N)c1N([O-])[O-] / CCN(CC)c1c([N+](=O)[O-])cc(C(F)(F)F)c(N)c1[N+](=O)[O-]"
+    },
+    {
+      "id": "mobley_52782",
+      "name": "1,2-dinitroxyethane",
+      "error": "Identity mismatch: [O-]N([O-])OCCON([O-])[O-] / O=[N+]([O-])OCCO[N+](=O)[O-]"
+    },
+    {
+      "id": "mobley_5747188",
+      "name": "1-methyl-2-nitro-benzene",
+      "error": "Identity mismatch: Cc1ccccc1N([O-])[O-] / Cc1ccccc1[N+](=O)[O-]"
+    },
+    {
+      "id": "mobley_5948990",
+      "name": "2-nitroaniline",
+      "error": "Identity mismatch: Nc1ccccc1N([O-])[O-] / Nc1ccccc1[N+](=O)[O-]"
+    },
+    {
+      "id": "mobley_6006813",
+      "name": "1-nitrobutane",
+      "error": "Identity mismatch: CCCCN([O-])[O-] / CCCC[N+](=O)[O-]"
+    },
+    {
+      "id": "mobley_6082662",
+      "name": "4-nitroaniline",
+      "error": "Identity mismatch: Nc1ccc(N([O-])[O-])cc1 / Nc1ccc([N+](=O)[O-])cc1"
+    },
+    {
+      "id": "mobley_6727159",
+      "name": "2-(nitrooxy)ethan-1-ol",
+      "error": "Identity mismatch: [O-]N([O-])OCCO / O=[N+]([O-])OCCO"
+    },
+    {
+      "id": "mobley_7176248",
+      "name": "trifluralin",
+      "error": "Identity mismatch: CCCN(CCC)c1c(N([O-])[O-])cc(C(F)(F)F)cc1N([O-])[O-] / CCCN(CCC)c1c([N+](=O)[O-])cc(C(F)(F)F)cc1[N+](=O)[O-]"
+    },
+    {
+      "id": "mobley_7176290",
+      "name": "3-nitrophenol",
+      "error": "Identity mismatch: [O-]N([O-])c1cccc(O)c1 / O=[N+]([O-])c1cccc(O)c1"
+    },
+    {
+      "id": "mobley_7298388",
+      "name": "1-methyl-3-nitro-benzene",
+      "error": "Identity mismatch: Cc1cccc(N([O-])[O-])c1 / Cc1cccc([N+](=O)[O-])c1"
+    },
+    {
+      "id": "mobley_7415647",
+      "name": "N,N-dimethyl-4-nitro-benzamide",
+      "error": "Identity mismatch: CN(C)C(=O)c1ccc(N([O-])[O-])cc1 / CN(C)C(=O)c1ccc([N+](=O)[O-])cc1"
+    },
+    {
+      "id": "mobley_7829570",
+      "name": "N-butyl-N-ethyl-2,6-dinitro-4-(trifluoromethyl)aniline",
+      "error": "Identity mismatch: CCCCN(CC)c1c(N([O-])[O-])cc(C(F)(F)F)cc1N([O-])[O-] / CCCCN(CC)c1c([N+](=O)[O-])cc(C(F)(F)F)cc1[N+](=O)[O-]"
+    },
+    {
+      "id": "mobley_7869158",
+      "name": "[(2S)-butan-2-yl] nitrate",
+      "error": "Identity mismatch: CC[C@H](C)ON([O-])[O-] / CC[C@H](C)O[N+](=O)[O-]"
+    },
+    {
+      "id": "mobley_8320545",
+      "name": "1-nitroethane",
+      "error": "Identity mismatch: CCN([O-])[O-] / CC[N+](=O)[O-]"
+    },
+    {
+      "id": "mobley_902954",
+      "name": "butyl nitrate",
+      "error": "Identity mismatch: CCCCON([O-])[O-] / CCCCO[N+](=O)[O-]"
+    },
+    {
+      "id": "mobley_9139060",
+      "name": "1,4-dimethylcyclohexane",
+      "error": "Identity mismatch: C[C@H]1CC[C@H](C)CC1 / CC1CCC(C)CC1"
+    },
+    {
+      "id": "mobley_9281946",
+      "name": "diethoxy-(4-nitrophenoxy)-thioxo-$l^{5}-phosphane",
+      "error": "Identity mismatch: CCOP(=S)(OCC)Oc1ccc(N([O-])[O-])cc1 / CCOP(=S)(OCC)Oc1ccc([N+](=O)[O-])cc1"
+    },
+    {
+      "id": "mobley_9571888",
+      "name": "endosulfan alpha",
+      "error": "Identity mismatch: O=[S@@]1OC[C@@H]2[C@H](CO1)[C@]1(Cl)C(Cl)=C(Cl)[C@@]2(Cl)C1(Cl)Cl / O=S1OC[C@@H]2[C@H](CO1)[C@]1(Cl)C(Cl)=C(Cl)[C@@]2(Cl)C1(Cl)Cl"
+    },
+    {
+      "id": "mobley_9671033",
+      "name": "1-nitropropane",
+      "error": "Identity mismatch: CCCN([O-])[O-] / CCC[N+](=O)[O-]"
+    },
+    {
+      "id": "mobley_967099",
+      "name": "2-nitropropane",
+      "error": "Identity mismatch: CC(C)N([O-])[O-] / CC(C)[N+](=O)[O-]"
+    },
+    {
+      "id": "mobley_9741965",
+      "name": "1,3-bis-(nitrooxy)butane",
+      "error": "Identity mismatch: C[C@@H](CCON([O-])[O-])ON([O-])[O-] / C[C@@H](CCO[N+](=O)[O-])O[N+](=O)[O-]"
+    }
+  ]
+}

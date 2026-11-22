@@ -1,0 +1,1818 @@
+{
+  "repository": "https://github.com/Kevin-Mattheus-Moerman/BodyParts3D",
+  "dataset": "BodyParts3D 3.0 (20110915), DBCLS",
+  "license": "CC BY-SA 2.1 Japan",
+  "sourcePath": "assets/BodyParts3D_data/stl/",
+  "sources": {
+    "FMA10014": {
+      "name": "ninth thoracic vertebra",
+      "sha": "fe4d88049910ec51817d13da11a13a951316af39",
+      "bytes": 564384
+    },
+    "FMA10037": {
+      "name": "tenth thoracic vertebra",
+      "sha": "3775902c33dcea2301e4a271f41f9b29ff8ccb99",
+      "bytes": 596484
+    },
+    "FMA10059": {
+      "name": "eleventh thoracic vertebra",
+      "sha": "5d7ce507e589db5b8b30dd183d7f1a3d958b3a68",
+      "bytes": 282684
+    },
+    "FMA10081": {
+      "name": "twelfth thoracic vertebra",
+      "sha": "b51bd9ec204d2aea6b0dd5539523aa2a30d0b2ea",
+      "bytes": 301984
+    },
+    "FMA12519": {
+      "name": "atlas",
+      "sha": "0baa9a334c9dcc0edf18766583e6844cf02feb97",
+      "bytes": 308684
+    },
+    "FMA12520": {
+      "name": "axis",
+      "sha": "836a2134498443bc0232225f4538a3b191d18836",
+      "bytes": 343584
+    },
+    "FMA12521": {
+      "name": "third cervical vertebra",
+      "sha": "e1cfb107cef73e797c31079b67e2fa77fe004cc8",
+      "bytes": 263984
+    },
+    "FMA12522": {
+      "name": "fourth cervical vertebra",
+      "sha": "a17a67c4aad36b42e0cc646548c3d9108eb82735",
+      "bytes": 211284
+    },
+    "FMA12523": {
+      "name": "fifth cervical vertebra",
+      "sha": "a65b7498adde062279a31ecdc430f8bbe4563450",
+      "bytes": 237784
+    },
+    "FMA12524": {
+      "name": "sixth cervical vertebra",
+      "sha": "f5c0e94cc332d12090c777558b7dbb3e5e2378e3",
+      "bytes": 317584
+    },
+    "FMA12525": {
+      "name": "seventh cervical vertebra",
+      "sha": "0105ea0865b4307f9515035380746a5079e83c26",
+      "bytes": 261184
+    },
+    "FMA13072": {
+      "name": "first lumbar vertebra",
+      "sha": "ef0153452b18edd466d3207644fe3fe8053991df",
+      "bytes": 647384
+    },
+    "FMA13073": {
+      "name": "second lumbar vertebra",
+      "sha": "484f22f8028ec3839ac676baf66cd1909642a0b8",
+      "bytes": 347384
+    },
+    "FMA13074": {
+      "name": "third lumbar vertebra",
+      "sha": "f3b89ff0e70887ca2d3bada6726ff2ad93f1d835",
+      "bytes": 737584
+    },
+    "FMA13075": {
+      "name": "fourth lumbar vertebra",
+      "sha": "5b4ac04a5fd65b6dd7c93e8153ae8565d66446a0",
+      "bytes": 771384
+    },
+    "FMA13076": {
+      "name": "fifth lumbar vertebra",
+      "sha": "adeb092268d53c57dc43cd0f43a841ffa3f6557a",
+      "bytes": 864184
+    },
+    "FMA13322": {
+      "name": "right clavicle",
+      "sha": "a6a28a8836a5774ba6583e0ddb2a7ac50527bce2",
+      "bytes": 255684
+    },
+    "FMA13323": {
+      "name": "left clavicle",
+      "sha": "720ad5a5bf08e02620a2cb622cc2e785918233bf",
+      "bytes": 257084
+    },
+    "FMA13395": {
+      "name": "right scapula",
+      "sha": "0f8acdbc40243cd51c32b74b88c07ff943d874ea",
+      "bytes": 5662884
+    },
+    "FMA13396": {
+      "name": "left scapula",
+      "sha": "af4ae4dda8da973c5c98ca98ac250b81c8de804e",
+      "bytes": 6090884
+    },
+    "FMA13889": {
+      "name": "pituitary gland",
+      "sha": "b19fcfec9efa340bfab89c3969f1f7d1e8bc273b",
+      "bytes": 252684
+    },
+    "FMA14544": {
+      "name": "rectum",
+      "sha": "80996be55b42540eddd71631ef036774ec747a47",
+      "bytes": 441284
+    },
+    "FMA15629": {
+      "name": "right adrenal gland",
+      "sha": "02c16afdd734eafc16cee6203ea0ff5d21c04c9d",
+      "bytes": 493784
+    },
+    "FMA15630": {
+      "name": "left adrenal gland",
+      "sha": "378d4c91ba04d25c80623a07f377d873eed85f8a",
+      "bytes": 989484
+    },
+    "FMA15900": {
+      "name": "urinary bladder",
+      "sha": "0ca0827126101d5ffd061a7c9266ea523fca2349",
+      "bytes": 200884
+    },
+    "FMA16202": {
+      "name": "sacrum",
+      "sha": "d19b42e8ef3402a6b9683b785f82c7f9caf44556",
+      "bytes": 2220884
+    },
+    "FMA16586": {
+      "name": "right hip bone",
+      "sha": "d4ca0b78c6ca6fbc54aafc1f3bb85085ed9bd62b",
+      "bytes": 485884
+    },
+    "FMA16587": {
+      "name": "left hip bone",
+      "sha": "652e8e52967d6c74f4b9ec3b35009c50beefcaf3",
+      "bytes": 473584
+    },
+    "FMA230986": {
+      "name": "middle phalanx of right little toe",
+      "sha": "cfee2e1a02af8082641e606e545e71c80b727a2e",
+      "bytes": 14784
+    },
+    "FMA230988": {
+      "name": "middle phalanx of left little toe",
+      "sha": "aa7cd51f90a5c37ed2041abb5bdda439ff605e2d",
+      "bytes": 15184
+    },
+    "FMA23130": {
+      "name": "right humerus",
+      "sha": "64fe01d3cde7968c55ece5efec913250e36e110f",
+      "bytes": 813484
+    },
+    "FMA23131": {
+      "name": "left humerus",
+      "sha": "3ebc938bcfef968a884b6249cd57ba6bd730fbf5",
+      "bytes": 824684
+    },
+    "FMA23464": {
+      "name": "right radius",
+      "sha": "29b54b23f1f432d314508be0473e6970f9cfa5f9",
+      "bytes": 140284
+    },
+    "FMA23465": {
+      "name": "left radius",
+      "sha": "6f232aa9afa40141895177e03d855f96ed74b495",
+      "bytes": 135784
+    },
+    "FMA23467": {
+      "name": "right ulna",
+      "sha": "15651f87e6bcf0be87e966f764747d52c547ede4",
+      "bytes": 179684
+    },
+    "FMA23468": {
+      "name": "left ulna",
+      "sha": "3f72a8bfcee9b0e1bc12969a75cfb813170921ac",
+      "bytes": 176984
+    },
+    "FMA23725": {
+      "name": "right trapezoid",
+      "sha": "e618f5c6b49ee6db8026e19be3e3d8b887719236",
+      "bytes": 30884
+    },
+    "FMA23938": {
+      "name": "middle phalanx of left index finger",
+      "sha": "2f5bed7f115004ec6c8670ff10a8f3748bf25ffa",
+      "bytes": 56984
+    },
+    "FMA23940": {
+      "name": "middle phalanx of left middle finger",
+      "sha": "872e2a440a59298313dbd4537f8c4d0ca25d6f2a",
+      "bytes": 74884
+    },
+    "FMA23942": {
+      "name": "middle phalanx of left ring finger",
+      "sha": "f11e6c37b67a08d246770aa2df93aa259e431f6e",
+      "bytes": 67284
+    },
+    "FMA23944": {
+      "name": "middle phalanx of left little finger",
+      "sha": "9c24e15105faaf51fddc043c404d985c8e8da348",
+      "bytes": 44284
+    },
+    "FMA23951": {
+      "name": "distal phalanx of left thumb",
+      "sha": "a816cf8328178fd309f3cbeee3fefbde2df19ae1",
+      "bytes": 49484
+    },
+    "FMA23953": {
+      "name": "distal phalanx of left index finger",
+      "sha": "261fbe1553dd77a40748e3fee83daef59cf72fef",
+      "bytes": 32584
+    },
+    "FMA23955": {
+      "name": "distal phalanx of left middle finger",
+      "sha": "115a4c48283860536d0634c3cca28a2cf5aae4e2",
+      "bytes": 31784
+    },
+    "FMA23957": {
+      "name": "distal phalanx of left ring finger",
+      "sha": "38ea7afc21cb87a2c7b3465bd852f07d40e8eef0",
+      "bytes": 22484
+    },
+    "FMA23959": {
+      "name": "distal phalanx of left little finger",
+      "sha": "f5f073435d00f949bd9a4e959803f38ec9717c06",
+      "bytes": 22784
+    },
+    "FMA24435": {
+      "name": "right scaphoid",
+      "sha": "dafaffd4d82cb715e841cf0b2c42f8b140785cef",
+      "bytes": 53784
+    },
+    "FMA24436": {
+      "name": "left scaphoid",
+      "sha": "5b418c18cf4bf4f23fc4937b060e3c3b5edecd75",
+      "bytes": 53584
+    },
+    "FMA24437": {
+      "name": "right lunate",
+      "sha": "c2d354860b3581f85685af4c930ffff62c747c0d",
+      "bytes": 43284
+    },
+    "FMA24438": {
+      "name": "left lunate",
+      "sha": "f4a88e4d70860329e5c207a0a03999816b9ebd1c",
+      "bytes": 43384
+    },
+    "FMA24439": {
+      "name": "right triquetral",
+      "sha": "988746e8455f1d5eaf8a34ac5d624eff294a4240",
+      "bytes": 35284
+    },
+    "FMA24440": {
+      "name": "left triquetral",
+      "sha": "dc71b7af20ccc093c956d8436974b8982bc4e06a",
+      "bytes": 34984
+    },
+    "FMA24441": {
+      "name": "right pisiform",
+      "sha": "cc198a4cb5a3dd996201336cc6c5608de11438fa",
+      "bytes": 19884
+    },
+    "FMA24442": {
+      "name": "left pisiform",
+      "sha": "dab2c65cb5ffaf0f318df53bd362070e04d3070c",
+      "bytes": 19884
+    },
+    "FMA24443": {
+      "name": "right trapezium",
+      "sha": "0a4f30ad95ed46d9931945d3898e693400103cdc",
+      "bytes": 51384
+    },
+    "FMA24444": {
+      "name": "left trapezium",
+      "sha": "125b48fbc03df541a9011612a2693c8da8a3614b",
+      "bytes": 52984
+    },
+    "FMA24445": {
+      "name": "left trapezoid",
+      "sha": "1ff939cb4b3de1e5ad9cf36c3089591f3271814a",
+      "bytes": 30684
+    },
+    "FMA24446": {
+      "name": "right capitate",
+      "sha": "f91a4469f464059e4ec315885e6b05d6fda6cf60",
+      "bytes": 64284
+    },
+    "FMA24447": {
+      "name": "left capitate",
+      "sha": "c36582d3feca01ec317013d24682d9bad262993c",
+      "bytes": 63984
+    },
+    "FMA24448": {
+      "name": "right hamate",
+      "sha": "0eb1dddd052777e835cafa1f33cc5e83baf65045",
+      "bytes": 57584
+    },
+    "FMA24449": {
+      "name": "left hamate",
+      "sha": "614718b78943592eaace4980a2be91aa241f9810",
+      "bytes": 56584
+    },
+    "FMA24450": {
+      "name": "proximal phalanx of right thumb",
+      "sha": "43dbca59c04f647b9795c7860d442e90f9bedfb7",
+      "bytes": 68484
+    },
+    "FMA24451": {
+      "name": "proximal phalanx of right index finger",
+      "sha": "bbf990c90dd6d243e1c0011414cdf872bce95087",
+      "bytes": 83284
+    },
+    "FMA24452": {
+      "name": "proximal phalanx of right middle finger",
+      "sha": "61b94d0698c1125ce7221247d4459fdef58f8fa6",
+      "bytes": 98484
+    },
+    "FMA24453": {
+      "name": "proximal phalanx of right ring finger",
+      "sha": "363e1dca32cdac413e651a199b47a2926aa6360d",
+      "bytes": 81084
+    },
+    "FMA24454": {
+      "name": "proximal phalanx of right little finger",
+      "sha": "1cc143e3dc5c2305661b9662bae2d707537f8ad1",
+      "bytes": 60484
+    },
+    "FMA24455": {
+      "name": "middle phalanx of right index finger",
+      "sha": "19e95f459945de1462df712b77c114550396ca22",
+      "bytes": 57084
+    },
+    "FMA24456": {
+      "name": "middle phalanx of right middle finger",
+      "sha": "d61e4a6749cbb4c8a3229e2718bc0ee9354b322b",
+      "bytes": 73884
+    },
+    "FMA24457": {
+      "name": "middle phalanx of right ring finger",
+      "sha": "8ae8ff2b65c9de00b8e216785d6360f5d60acaa3",
+      "bytes": 67584
+    },
+    "FMA24458": {
+      "name": "middle phalanx of right little finger",
+      "sha": "9cd1748b5f2debcd5d93f5d86ca7c433dafb8bc7",
+      "bytes": 45084
+    },
+    "FMA24459": {
+      "name": "distal phalanx of right thumb",
+      "sha": "07e92862e0f75fa97d5c9d8c2fc5627e1ddaf573",
+      "bytes": 52084
+    },
+    "FMA24460": {
+      "name": "distal phalanx of right index finger",
+      "sha": "3472853c4d032cf56aadd83401817f4dd6193c79",
+      "bytes": 32884
+    },
+    "FMA24461": {
+      "name": "distal phalanx of right middle finger",
+      "sha": "f1fc1bc737025cdd1138d0cc0ec2475a07171a40",
+      "bytes": 32084
+    },
+    "FMA24462": {
+      "name": "distal phalanx of right ring finger",
+      "sha": "7a0a57c06ce7bb53990f66721326a64e8d09128a",
+      "bytes": 22684
+    },
+    "FMA24463": {
+      "name": "distal phalanx of right little finger",
+      "sha": "0ff919a9c36e3e59dec1d67c1905d64ba808bd1a",
+      "bytes": 23384
+    },
+    "FMA24464": {
+      "name": "right first metacarpal bone",
+      "sha": "e2ec8953920b44b1d137155ec84a1a6be7245a99",
+      "bytes": 121784
+    },
+    "FMA24465": {
+      "name": "left first metacarpal bone",
+      "sha": "c1a9c2bdf2f526599c2df14032eaab8f77661adb",
+      "bytes": 124084
+    },
+    "FMA24466": {
+      "name": "right second metacarpal bone",
+      "sha": "a2f520687d3d6b5e6b72664b430465f642e8c016",
+      "bytes": 160984
+    },
+    "FMA24467": {
+      "name": "left second metacarpal bone",
+      "sha": "de0be6d0ed9810e867064b1ade8c0252a34f0bd9",
+      "bytes": 163284
+    },
+    "FMA24468": {
+      "name": "right third metacarpal bone",
+      "sha": "f2a31e78a08a13b4a19eb3b71f6597e7fed9c703",
+      "bytes": 150984
+    },
+    "FMA24469": {
+      "name": "left third metacarpal bone",
+      "sha": "00a9a82cdc7fc93fa72d15f6b2613c43b9c7d7fe",
+      "bytes": 152084
+    },
+    "FMA24470": {
+      "name": "right fourth metacarpal bone",
+      "sha": "5d11c39c9f0631cddcd2dbdea438304902faaf64",
+      "bytes": 115384
+    },
+    "FMA24471": {
+      "name": "left fourth metacarpal bone",
+      "sha": "28adb140857a88cd72eb425eed72987430f562bc",
+      "bytes": 113584
+    },
+    "FMA24472": {
+      "name": "right fifth metacarpal bone",
+      "sha": "a71dea9b3e7a3107c79bbe5621c82ae657e74933",
+      "bytes": 108984
+    },
+    "FMA24473": {
+      "name": "left fifth metacarpal bone",
+      "sha": "2484b6cb46d6b1e413d0bc10078469dc0e53d6dc",
+      "bytes": 107384
+    },
+    "FMA24474": {
+      "name": "right femur",
+      "sha": "ded8f431bee150b6828c531f6014a280634dc47b",
+      "bytes": 649584
+    },
+    "FMA24475": {
+      "name": "left femur",
+      "sha": "665670a8bc085616d5ed9da7f4789f1af8e1dd8b",
+      "bytes": 660184
+    },
+    "FMA24477": {
+      "name": "right tibia",
+      "sha": "7a2fa6a0f11114aca91c81d6cb803a83166ff212",
+      "bytes": 342584
+    },
+    "FMA24478": {
+      "name": "left tibia",
+      "sha": "b9270774fac7ef3761727b8240685c0906660af4",
+      "bytes": 341184
+    },
+    "FMA24480": {
+      "name": "right fibula",
+      "sha": "1b59a40b7e964041b7d268261cce8de167ec11b1",
+      "bytes": 231184
+    },
+    "FMA24481": {
+      "name": "left fibula",
+      "sha": "c7ae15a6db9d5716c3405771a2861f4c571b62c1",
+      "bytes": 227284
+    },
+    "FMA24482": {
+      "name": "right talus",
+      "sha": "10a6989a33c467d9be9a5971d0f73464c13d3181",
+      "bytes": 298184
+    },
+    "FMA24483": {
+      "name": "left talus",
+      "sha": "5ea1851f81dbbe9afddea567cc74af383f74fbd5",
+      "bytes": 296284
+    },
+    "FMA24486": {
+      "name": "right patella",
+      "sha": "5dd06c1728537fbcfc1dc73a8b7699d996d35343",
+      "bytes": 66784
+    },
+    "FMA24487": {
+      "name": "left patella",
+      "sha": "5e12c86b298d46138441d0f325a9aafcdc8be360",
+      "bytes": 66984
+    },
+    "FMA24497": {
+      "name": "right calcaneus",
+      "sha": "bc30e4e07fb116e43aed2041c696bfa2db81d679",
+      "bytes": 272484
+    },
+    "FMA24498": {
+      "name": "left calcaneus",
+      "sha": "7f89ebcdb1dedb8f0cdceea13f52dade8da1905b",
+      "bytes": 282684
+    },
+    "FMA24500": {
+      "name": "navicular bone of right foot",
+      "sha": "ee38154ffd3d2a33fb03b5da1281fbc70dd6bd59",
+      "bytes": 151184
+    },
+    "FMA24501": {
+      "name": "navicular bone of left foot",
+      "sha": "61b12842d505906c21b189f8e9e06f6ff23f9307",
+      "bytes": 154884
+    },
+    "FMA24507": {
+      "name": "right first metatarsal bone",
+      "sha": "68fa8bf7b1ef404ca7385d5a394948ca5504fe92",
+      "bytes": 244384
+    },
+    "FMA24508": {
+      "name": "left first metatarsal bone",
+      "sha": "9d98e1b8d7ea4fde90a5352cab47edabc0cc59d3",
+      "bytes": 243084
+    },
+    "FMA24509": {
+      "name": "right second metatarsal bone",
+      "sha": "43d1468c37e40edf54e493207b7d198f3a78d6d3",
+      "bytes": 162984
+    },
+    "FMA24510": {
+      "name": "left second metatarsal bone",
+      "sha": "a792922445451dbcbeaaffe86196fa15df35952d",
+      "bytes": 169484
+    },
+    "FMA24511": {
+      "name": "right third metatarsal bone",
+      "sha": "def12a7c5eef843f8c3c5bc3b81c4691acaa2b4b",
+      "bytes": 151584
+    },
+    "FMA24512": {
+      "name": "left third metatarsal bone",
+      "sha": "0e3c4dbb77b4226f016cb14f1825a1d50c936752",
+      "bytes": 161484
+    },
+    "FMA24513": {
+      "name": "right fourth metatarsal bone",
+      "sha": "a09e042fd823c8cb7ff5d2dda2c8f4b333f98bf6",
+      "bytes": 145984
+    },
+    "FMA24514": {
+      "name": "left fourth metatarsal bone",
+      "sha": "d350284518df54e64b02d160c0cfbad4e98e768f",
+      "bytes": 155984
+    },
+    "FMA24515": {
+      "name": "right fifth metatarsal bone",
+      "sha": "0ce1c1f36bba703a80c262518c87cc5d88b34a93",
+      "bytes": 171684
+    },
+    "FMA24516": {
+      "name": "left fifth metatarsal bone",
+      "sha": "06774b39592c9feba7f31af25dc589bfffb41631",
+      "bytes": 184484
+    },
+    "FMA24521": {
+      "name": "right medial cuneiform bone",
+      "sha": "fa1e9aca6a7e35d045ede7a112337dde3557637e",
+      "bytes": 205784
+    },
+    "FMA24522": {
+      "name": "left medial cuneiform bone",
+      "sha": "4f3e6a51f64bd57b5e3ff4d3959f01d3405b4a6b",
+      "bytes": 210584
+    },
+    "FMA24523": {
+      "name": "right intermediate cuneiform bone",
+      "sha": "3d9c6b5b330750a9ff83f174f01bf9bd738bb17f",
+      "bytes": 97484
+    },
+    "FMA24524": {
+      "name": "left intermediate cuneiform bone",
+      "sha": "467b9501ca778d384a4bb8ec6777ccf78e8eac26",
+      "bytes": 105384
+    },
+    "FMA24525": {
+      "name": "right lateral cuneiform bone",
+      "sha": "771ca240a8a63868aa1c7e8d186ff7aeb20bfbd0",
+      "bytes": 135184
+    },
+    "FMA24526": {
+      "name": "left lateral cuneiform bone",
+      "sha": "7c377a9e71962d450130462d5ccd5301b9d4cdd3",
+      "bytes": 148484
+    },
+    "FMA24528": {
+      "name": "right cuboid bone",
+      "sha": "33c1f77ea14a9754b7c60855607b5aefffe08321",
+      "bytes": 181784
+    },
+    "FMA24529": {
+      "name": "left cuboid bone",
+      "sha": "8b3b89ae479be79573aefb3dc15684420d8525fe",
+      "bytes": 190284
+    },
+    "FMA32634": {
+      "name": "proximal phalanx of right second toe",
+      "sha": "d67e59a93ca9c87c4d5fc8ceea3aa9ca51c7e704",
+      "bytes": 68184
+    },
+    "FMA32635": {
+      "name": "proximal phalanx of left second toe",
+      "sha": "3eeea87d35d773d3d5dcfd4d4a1b85e242f79e2f",
+      "bytes": 70884
+    },
+    "FMA32636": {
+      "name": "proximal phalanx of right third toe",
+      "sha": "6c590a974a0aba3fbcc77dd132b6abb9196d7469",
+      "bytes": 61184
+    },
+    "FMA32637": {
+      "name": "proximal phalanx of left third toe",
+      "sha": "333375091cd08b2307b17c542a28d6e2a0a5c146",
+      "bytes": 62984
+    },
+    "FMA32638": {
+      "name": "proximal phalanx of right fourth toe",
+      "sha": "bcc25b9b6e396397c4a8b63fee7962ecc83c5ecb",
+      "bytes": 54784
+    },
+    "FMA32639": {
+      "name": "proximal phalanx of left fourth toe",
+      "sha": "0423284ad36dc3040fb0375086b9a65f3f247f87",
+      "bytes": 58384
+    },
+    "FMA32640": {
+      "name": "proximal phalanx of right little toe",
+      "sha": "0afe8bac146520f530fe6ac487f89db457239978",
+      "bytes": 57484
+    },
+    "FMA32641": {
+      "name": "proximal phalanx of left little toe",
+      "sha": "93ab41b260ee4097d91f5aeb93f44934e0494697",
+      "bytes": 60384
+    },
+    "FMA32642": {
+      "name": "middle phalanx of right second toe",
+      "sha": "6ba3b15a9b2ff49aa457e0abc2000b3b980479c1",
+      "bytes": 32684
+    },
+    "FMA32643": {
+      "name": "middle phalanx of left second toe",
+      "sha": "8863fc44d33f54614a433736954f6b69969fc71d",
+      "bytes": 34384
+    },
+    "FMA32644": {
+      "name": "middle phalanx of right third toe",
+      "sha": "3074a884c3d6e895fd441b2c471c93404c523564",
+      "bytes": 31784
+    },
+    "FMA32645": {
+      "name": "middle phalanx of left third toe",
+      "sha": "bdf5a76c6da39891ea3378f28e1d7995f4b056b4",
+      "bytes": 31984
+    },
+    "FMA32646": {
+      "name": "middle phalanx of right fourth toe",
+      "sha": "06689156c83d0385eea8599e843a3ca57416e1b3",
+      "bytes": 26084
+    },
+    "FMA32647": {
+      "name": "middle phalanx of left fourth toe",
+      "sha": "ddff0d06ee0d3987b069249f0934d20bb7ad2d96",
+      "bytes": 27384
+    },
+    "FMA32650": {
+      "name": "distal phalanx of right big toe",
+      "sha": "b0516545ab828cc5267d114e6845ad2fe3d26b2c",
+      "bytes": 80384
+    },
+    "FMA32651": {
+      "name": "distal phalanx of left big toe",
+      "sha": "98ad11e768eeb124803cc61e1135d190341eb0a1",
+      "bytes": 79784
+    },
+    "FMA32652": {
+      "name": "distal phalanx of right second toe",
+      "sha": "548f240f663338bfa70ae943f7a92b60edfa98c9",
+      "bytes": 23384
+    },
+    "FMA32653": {
+      "name": "distal phalanx of left second toe",
+      "sha": "1e8916c8b523fbf5fad389445c86d27d9f5d3676",
+      "bytes": 24184
+    },
+    "FMA32654": {
+      "name": "distal phalanx of right third toe",
+      "sha": "22d418cd93e40ea7c17c1dd7ce105c128ae8914c",
+      "bytes": 16784
+    },
+    "FMA32655": {
+      "name": "distal phalanx of left third toe",
+      "sha": "8e11b0de932695481ab53c62e250f0fd704da0b1",
+      "bytes": 17784
+    },
+    "FMA32656": {
+      "name": "distal phalanx of right fourth toe",
+      "sha": "1f87ca397b912665b575d40cbeed45ad2119fb3e",
+      "bytes": 18184
+    },
+    "FMA32657": {
+      "name": "distal phalanx of left fourth toe",
+      "sha": "e5bd860dd9318465087939fe58c07d71f3b92dff",
+      "bytes": 18284
+    },
+    "FMA32658": {
+      "name": "distal phalanx of right little toe",
+      "sha": "64cae88a6d0e7ed4eb36b4c62f7a57e715c82eae",
+      "bytes": 13784
+    },
+    "FMA32659": {
+      "name": "distal phalanx of left little toe",
+      "sha": "8db384c0d9817f59155f8bbf99905bba70b127d9",
+      "bytes": 14284
+    },
+    "FMA43253": {
+      "name": "proximal phalanx of right big toe",
+      "sha": "7792a711c4bdd72db406ec4fd06f4ae56218d383",
+      "bytes": 105384
+    },
+    "FMA43254": {
+      "name": "proximal phalanx of left big toe",
+      "sha": "86fda4fc1456f50a9a3a40dbd8d3132e02651e81",
+      "bytes": 109784
+    },
+    "FMA52734": {
+      "name": "frontal bone",
+      "sha": "8a66e501e3c68978f02160e01c889951d7d46bec",
+      "bytes": 1653184
+    },
+    "FMA52735": {
+      "name": "occipital bone",
+      "sha": "f9a6e3b328d87cb4b23fb13dc349729e0a09b42e",
+      "bytes": 1390684
+    },
+    "FMA52736": {
+      "name": "sphenoid bone",
+      "sha": "116327d103e208109049bb8aaf1dbda568fef4e0",
+      "bytes": 766184
+    },
+    "FMA52738": {
+      "name": "right temporal bone",
+      "sha": "e7cb05be6c937bab7305ed2e6e1cb6c4419e5be6",
+      "bytes": 563784
+    },
+    "FMA52739": {
+      "name": "left temporal bone",
+      "sha": "e77a132baf36f50aca75cc3e5a633d37dc22277b",
+      "bytes": 560484
+    },
+    "FMA52740": {
+      "name": "ethmoid",
+      "sha": "f1ba8a6ff4daa1dae4975f6e396373ca6fee97ec",
+      "bytes": 388784
+    },
+    "FMA52748": {
+      "name": "mandible",
+      "sha": "44cd7a3eb5ac445cb19c15cf3f6245b04f49d707",
+      "bytes": 1082984
+    },
+    "FMA52749": {
+      "name": "hyoid bone",
+      "sha": "d1b94504534c83df505f975be34c7f92958a5c7e",
+      "bytes": 276784
+    },
+    "FMA52788": {
+      "name": "right parietal bone",
+      "sha": "a54c4dd2536da789db79bdb7c9d09c9e96ab8186",
+      "bytes": 1486784
+    },
+    "FMA52789": {
+      "name": "left parietal bone",
+      "sha": "96f326c0523c23df6912ca4f660e5dd3ffc03527",
+      "bytes": 1512584
+    },
+    "FMA52892": {
+      "name": "right zygomatic bone",
+      "sha": "7b5756fe4f180355e37d4e3be17ee9cf48ad8da4",
+      "bytes": 230684
+    },
+    "FMA52893": {
+      "name": "left zygomatic bone",
+      "sha": "1d4d13f8208c15374863646307fcfcd6c6f09144",
+      "bytes": 228084
+    },
+    "FMA53645": {
+      "name": "right lacrimal bone",
+      "sha": "344818b9ff35f263d8ce233b53815c9045b3c99a",
+      "bytes": 55784
+    },
+    "FMA53646": {
+      "name": "left lacrimal bone",
+      "sha": "491d4715bccf6dcb5eeadc0cb30ef9a46f7feca0",
+      "bytes": 57684
+    },
+    "FMA53647": {
+      "name": "right nasal bone",
+      "sha": "2aa9381d4bdeefa4a9cbe7a867277acdfd8aabf6",
+      "bytes": 51284
+    },
+    "FMA53648": {
+      "name": "left nasal bone",
+      "sha": "729368b91dd8335cdddc7f1ef64da6d4dfca8729",
+      "bytes": 56284
+    },
+    "FMA53649": {
+      "name": "right maxilla",
+      "sha": "bfb0c6f1dab1a1c638436192b4e420b4ec54ee5a",
+      "bytes": 707484
+    },
+    "FMA53650": {
+      "name": "left maxilla",
+      "sha": "f4b524215c9910f08b6ff9cffa4e8d422a37144b",
+      "bytes": 725384
+    },
+    "FMA53655": {
+      "name": "right palatine bone",
+      "sha": "e10ce82c4ec9c0076387e0605a13d34936774187",
+      "bytes": 179684
+    },
+    "FMA53656": {
+      "name": "left palatine bone",
+      "sha": "ff4dd678e1961dba26e32dbf7afccb632791112b",
+      "bytes": 182184
+    },
+    "FMA54737": {
+      "name": "right inferior nasal concha",
+      "sha": "d08c19bb052cbffe71d039253f0efd9597fd179a",
+      "bytes": 80884
+    },
+    "FMA54738": {
+      "name": "left inferior nasal concha",
+      "sha": "25eb222e9317f732bc58c76c662ff19d58661248",
+      "bytes": 74284
+    },
+    "FMA65470": {
+      "name": "proximal phalanx of left thumb",
+      "sha": "75e0f9feb8d13a85609f09971b13533aa315d857",
+      "bytes": 65784
+    },
+    "FMA66791": {
+      "name": "proximal phalanx of left little finger",
+      "sha": "1654b559df2d9bddfdfbe0b61cac7e60f17976d7",
+      "bytes": 58984
+    },
+    "FMA67944": {
+      "name": "cerebellum",
+      "sha": "c0395f31486be6bc7492f98a212d8873a242ebc4",
+      "bytes": 11925384
+    },
+    "FMA7131": {
+      "name": "esophagus",
+      "sha": "53a84e7d9535f78b1386342d98618d71eb76c582",
+      "bytes": 132184
+    },
+    "FMA7148": {
+      "name": "stomach",
+      "sha": "5664b6c743db7b2534e08aa751aceb6ef6f1152d",
+      "bytes": 469284
+    },
+    "FMA71908": {
+      "name": "proximal phalanx of left middle finger",
+      "sha": "778f5fab16035422d5909223b08018f01b27b063",
+      "bytes": 98784
+    },
+    "FMA71915": {
+      "name": "proximal phalanx of left index finger",
+      "sha": "0d0446234ccb74d226c270a5e33aaac73f2d3225",
+      "bytes": 84284
+    },
+    "FMA71916": {
+      "name": "proximal phalanx of left ring finger",
+      "sha": "f53220c2ecb291ed6d8f63143b3ac7fda27396d6",
+      "bytes": 80884
+    },
+    "FMA7196": {
+      "name": "spleen",
+      "sha": "13316c628fb42a45c6a9b1c637b39367b423f7ae",
+      "bytes": 450884
+    },
+    "FMA7197": {
+      "name": "liver",
+      "sha": "3bf8baa513742619b6ba117b051a47e863505ef1",
+      "bytes": 970884
+    },
+    "FMA7198nsn": {
+      "name": "pancreas, nsn",
+      "sha": "bb3b47611c537bd47d42a439bc34ad8d27310e2a",
+      "bytes": 570784
+    },
+    "FMA7202": {
+      "name": "gallbladder",
+      "sha": "8412912d5e1495076ca6efeb9079ae62cf58be8f",
+      "bytes": 692384
+    },
+    "FMA7204": {
+      "name": "right kidney",
+      "sha": "325beb4f4ece92e8e65a85376cd2e68edd468bcd",
+      "bytes": 619784
+    },
+    "FMA7205": {
+      "name": "left kidney",
+      "sha": "f26ab378ca7834690162dc50e3ecc213266aaa1c",
+      "bytes": 767984
+    },
+    "FMA7206": {
+      "name": "duodenum",
+      "sha": "2d038957165b61a4c53bb9723a7f0b5896987742",
+      "bytes": 597584
+    },
+    "FMA7211": {
+      "name": "right testis",
+      "sha": "966ec7b6f67631cc16e8b756c0dac8e8b1beebf5",
+      "bytes": 13984
+    },
+    "FMA7212": {
+      "name": "left testis",
+      "sha": "a6f20ab26276b8d7c1881aa640bbaebd8d62e4d6",
+      "bytes": 14084
+    },
+    "FMA7274": {
+      "name": "wall of heart",
+      "sha": "7a7193e311fbe189ede08fd3bf0c5df1311de537",
+      "bytes": 16579684
+    },
+    "FMA7333": {
+      "name": "upper lobe of right lung",
+      "sha": "6b6ab7170fdab5d9cc05dd52e2a8ae7755cbb8bc",
+      "bytes": 1519984
+    },
+    "FMA7337": {
+      "name": "lower lobe of right lung",
+      "sha": "832f3b88cb7abd290ccae5d489fd6d479f5b29f2",
+      "bytes": 3279684
+    },
+    "FMA7370": {
+      "name": "upper lobe of left lung",
+      "sha": "ca16cd931f65eba1d91e448c2c39663a748211b3",
+      "bytes": 2032684
+    },
+    "FMA7371": {
+      "name": "lower lobe of left lung",
+      "sha": "2c70e46d2a33605a6c63e9716c99181cc5df8436",
+      "bytes": 2214484
+    },
+    "FMA7383": {
+      "name": "middle lobe of lung",
+      "sha": "1435b5d093a9d2ae21bd8087f7cbc69f4b8472d6",
+      "bytes": 1173984
+    },
+    "FMA7394": {
+      "name": "trachea",
+      "sha": "11da4939cdfdbef4906c4648f18f99d2229eed09",
+      "bytes": 693584
+    },
+    "FMA7486": {
+      "name": "manubrium",
+      "sha": "13a9334b67a3092084bf9b74b761563611a493a2",
+      "bytes": 594184
+    },
+    "FMA7487": {
+      "name": "body of sternum",
+      "sha": "fa7948c5cbd456089c965e481b366ea97a2ea937",
+      "bytes": 995884
+    },
+    "FMA7488": {
+      "name": "xiphoid process",
+      "sha": "806cecafd4c3e2167a2a99a8a120891b830fe564",
+      "bytes": 204384
+    },
+    "FMA7857": {
+      "name": "right first rib",
+      "sha": "7c90cb8cca8c02a5b8cab16e92afd4ea40955aa4",
+      "bytes": 709784
+    },
+    "FMA7882": {
+      "name": "right second rib",
+      "sha": "8624142c3e416b742a039de13fd727d2a584c64f",
+      "bytes": 1184784
+    },
+    "FMA7909": {
+      "name": "right third rib",
+      "sha": "02d820e7297018e3f567a668c1498e636af6c56a",
+      "bytes": 1543084
+    },
+    "FMA7957": {
+      "name": "right fourth rib",
+      "sha": "64d96c9a7b685caab9a9e7d6c3704945922ef678",
+      "bytes": 1924484
+    },
+    "FMA7987": {
+      "name": "left first rib",
+      "sha": "be28b5ee8e00693b438cffa9980c1c385ed22ee9",
+      "bytes": 773284
+    },
+    "FMA8012": {
+      "name": "left second rib",
+      "sha": "a8e93635ddd97561ae03358578fe2fbdb6df948c",
+      "bytes": 1265284
+    },
+    "FMA8039": {
+      "name": "left third rib",
+      "sha": "cd4bab108e475831cce05e5d961f71b613879bc8",
+      "bytes": 1560684
+    },
+    "FMA8066": {
+      "name": "right fifth rib",
+      "sha": "cd27206acfb3f4a26e2c77abec2a8cd9110c9fed",
+      "bytes": 2081784
+    },
+    "FMA8093": {
+      "name": "left fifth rib",
+      "sha": "f6f3a4c10d871aa79495f26ee39a047464703de3",
+      "bytes": 2078484
+    },
+    "FMA8148": {
+      "name": "left fourth rib",
+      "sha": "26a3f0bc09746ed3750ba5a08237d89c451b8778",
+      "bytes": 1896184
+    },
+    "FMA8175": {
+      "name": "right sixth rib",
+      "sha": "dbde29d9fd73772c96e91f7f3461d91b2beb1091",
+      "bytes": 2231784
+    },
+    "FMA8202": {
+      "name": "left sixth rib",
+      "sha": "8f305c97a23c4142a86ea005c74f379d9a1d5e6e",
+      "bytes": 2221784
+    },
+    "FMA8229": {
+      "name": "right seventh rib",
+      "sha": "9f734303eb74e1750b5aa26b5a2baca26930b0cb",
+      "bytes": 2157384
+    },
+    "FMA8256": {
+      "name": "left seventh rib",
+      "sha": "737ec06b48704d4521e7f79add1ff8a30b73d2d6",
+      "bytes": 2203184
+    },
+    "FMA8283": {
+      "name": "right eighth rib",
+      "sha": "a4ba569bc526117d24b52b59ddf6f7a4b2671474",
+      "bytes": 1832384
+    },
+    "FMA8310": {
+      "name": "left eighth rib",
+      "sha": "37a316855d052718b503d5b40fba3dd0a4d59e17",
+      "bytes": 1856784
+    },
+    "FMA8364": {
+      "name": "right ninth rib",
+      "sha": "7af49ba4fed22486661201dae1642a27c3dc110b",
+      "bytes": 1713984
+    },
+    "FMA8391": {
+      "name": "left ninth rib",
+      "sha": "43ed7639aa445d750d6247b4d7c89baf67eac897",
+      "bytes": 1801084
+    },
+    "FMA8445": {
+      "name": "right tenth rib",
+      "sha": "5c412b0bdac0dddfc47f8ff706b6410e715d6875",
+      "bytes": 1550584
+    },
+    "FMA8472": {
+      "name": "left tenth rib",
+      "sha": "84a961da3b750f63b7d7b49635cbe23be6eef4b3",
+      "bytes": 1587984
+    },
+    "FMA8531": {
+      "name": "right eleventh rib",
+      "sha": "e34fd45f1b94a2c8bbbff8b6462f93d736ab3089",
+      "bytes": 1121484
+    },
+    "FMA8532": {
+      "name": "left eleventh rib",
+      "sha": "268128de0accc5903151aff7b5aa601bf7ff9551",
+      "bytes": 1141384
+    },
+    "FMA8533": {
+      "name": "right twelfth rib",
+      "sha": "a878befad2348334a235b176cf3c49e62ab47536",
+      "bytes": 663184
+    },
+    "FMA8534": {
+      "name": "left twelfth rib",
+      "sha": "138ab2cbf384e2880840f0962784f5937b8b7d1a",
+      "bytes": 686384
+    },
+    "FMA9165": {
+      "name": "first thoracic vertebra",
+      "sha": "836f475f465f641c901dc8247778bba381881c29",
+      "bytes": 280784
+    },
+    "FMA9187": {
+      "name": "second thoracic vertebra",
+      "sha": "c32d1b1b9dce952dee201ff6742212f1bc10ffc4",
+      "bytes": 418084
+    },
+    "FMA9209": {
+      "name": "third thoracic vertebra",
+      "sha": "ed92d12c8d1a6b008ad536598836f870569d4edd",
+      "bytes": 445584
+    },
+    "FMA9248": {
+      "name": "fourth thoracic vertebra",
+      "sha": "8eb5c627faaa8b409b9c937a6267ee12d19142db",
+      "bytes": 446584
+    },
+    "FMA9600": {
+      "name": "prostate",
+      "sha": "d377209c076a6d61a4df232fc14794dd2ddc7d73",
+      "bytes": 87784
+    },
+    "FMA9710": {
+      "name": "vomer",
+      "sha": "8a3b8c6cad72cf3628807866e5b90ef13a07309d",
+      "bytes": 121184
+    },
+    "FMA9922": {
+      "name": "fifth thoracic vertebra",
+      "sha": "4f32806b16f18bb37073fb94cbf42cf8889ac1f7",
+      "bytes": 491784
+    },
+    "FMA9945": {
+      "name": "sixth thoracic vertebra",
+      "sha": "58396556a652315e1f365afa90b4073eb4c89e9b",
+      "bytes": 244884
+    },
+    "FMA9968": {
+      "name": "seventh thoracic vertebra",
+      "sha": "3efaa61786e54db4958b644c25206dc0ba1574be",
+      "bytes": 537084
+    },
+    "FMA9991": {
+      "name": "eighth thoracic vertebra",
+      "sha": "9c7a5f71ad333163c3a9cb86675bcf0c231d2e79",
+      "bytes": 260384
+    }
+  },
+  "catalog": {
+    "bones": {
+      "bone-001": [
+        "FMA52734"
+      ],
+      "bone-002": [
+        "FMA52735"
+      ],
+      "bone-003": [
+        "FMA52736"
+      ],
+      "bone-004": [
+        "FMA52740"
+      ],
+      "bone-005": [
+        "FMA52789"
+      ],
+      "bone-006": [
+        "FMA52739"
+      ],
+      "bone-007": [
+        "FMA53650"
+      ],
+      "bone-008": [
+        "FMA52893"
+      ],
+      "bone-009": [
+        "FMA53648"
+      ],
+      "bone-010": [
+        "FMA53646"
+      ],
+      "bone-011": [
+        "FMA53656"
+      ],
+      "bone-012": [
+        "FMA54738"
+      ],
+      "bone-013": [
+        "FMA52788"
+      ],
+      "bone-014": [
+        "FMA52738"
+      ],
+      "bone-015": [
+        "FMA53649"
+      ],
+      "bone-016": [
+        "FMA52892"
+      ],
+      "bone-017": [
+        "FMA53647"
+      ],
+      "bone-018": [
+        "FMA53645"
+      ],
+      "bone-019": [
+        "FMA53655"
+      ],
+      "bone-020": [
+        "FMA54737"
+      ],
+      "bone-021": [
+        "FMA52748"
+      ],
+      "bone-022": [
+        "FMA9710"
+      ],
+      "bone-029": [
+        "FMA52749"
+      ],
+      "bone-030": [
+        "FMA12519"
+      ],
+      "bone-031": [
+        "FMA12520"
+      ],
+      "bone-032": [
+        "FMA12521"
+      ],
+      "bone-033": [
+        "FMA12522"
+      ],
+      "bone-034": [
+        "FMA12523"
+      ],
+      "bone-035": [
+        "FMA12524"
+      ],
+      "bone-036": [
+        "FMA12525"
+      ],
+      "bone-037": [
+        "FMA9165"
+      ],
+      "bone-038": [
+        "FMA9187"
+      ],
+      "bone-039": [
+        "FMA9209"
+      ],
+      "bone-040": [
+        "FMA9248"
+      ],
+      "bone-041": [
+        "FMA9922"
+      ],
+      "bone-042": [
+        "FMA9945"
+      ],
+      "bone-043": [
+        "FMA9968"
+      ],
+      "bone-044": [
+        "FMA9991"
+      ],
+      "bone-045": [
+        "FMA10014"
+      ],
+      "bone-046": [
+        "FMA10037"
+      ],
+      "bone-047": [
+        "FMA10059"
+      ],
+      "bone-048": [
+        "FMA10081"
+      ],
+      "bone-049": [
+        "FMA13072"
+      ],
+      "bone-050": [
+        "FMA13073"
+      ],
+      "bone-051": [
+        "FMA13074"
+      ],
+      "bone-052": [
+        "FMA13075"
+      ],
+      "bone-053": [
+        "FMA13076"
+      ],
+      "bone-054": [
+        "FMA16202"
+      ],
+      "bone-056": [
+        "FMA7486",
+        "FMA7487",
+        "FMA7488"
+      ],
+      "bone-057": [
+        "FMA7987"
+      ],
+      "bone-058": [
+        "FMA8012"
+      ],
+      "bone-059": [
+        "FMA8039"
+      ],
+      "bone-060": [
+        "FMA8148"
+      ],
+      "bone-061": [
+        "FMA8093"
+      ],
+      "bone-062": [
+        "FMA8202"
+      ],
+      "bone-063": [
+        "FMA8256"
+      ],
+      "bone-064": [
+        "FMA8310"
+      ],
+      "bone-065": [
+        "FMA8391"
+      ],
+      "bone-066": [
+        "FMA8472"
+      ],
+      "bone-067": [
+        "FMA8532"
+      ],
+      "bone-068": [
+        "FMA8534"
+      ],
+      "bone-069": [
+        "FMA13323"
+      ],
+      "bone-070": [
+        "FMA13396"
+      ],
+      "bone-071": [
+        "FMA23131"
+      ],
+      "bone-072": [
+        "FMA23465"
+      ],
+      "bone-073": [
+        "FMA23468"
+      ],
+      "bone-074": [
+        "FMA24436"
+      ],
+      "bone-075": [
+        "FMA24438"
+      ],
+      "bone-076": [
+        "FMA24440"
+      ],
+      "bone-077": [
+        "FMA24442"
+      ],
+      "bone-078": [
+        "FMA24444"
+      ],
+      "bone-079": [
+        "FMA24445"
+      ],
+      "bone-080": [
+        "FMA24447"
+      ],
+      "bone-081": [
+        "FMA24449"
+      ],
+      "bone-082": [
+        "FMA24465"
+      ],
+      "bone-083": [
+        "FMA65470"
+      ],
+      "bone-084": [
+        "FMA23951"
+      ],
+      "bone-085": [
+        "FMA24467"
+      ],
+      "bone-086": [
+        "FMA71915"
+      ],
+      "bone-087": [
+        "FMA23938"
+      ],
+      "bone-088": [
+        "FMA23953"
+      ],
+      "bone-089": [
+        "FMA24469"
+      ],
+      "bone-090": [
+        "FMA71908"
+      ],
+      "bone-091": [
+        "FMA23940"
+      ],
+      "bone-092": [
+        "FMA23955"
+      ],
+      "bone-093": [
+        "FMA24471"
+      ],
+      "bone-094": [
+        "FMA71916"
+      ],
+      "bone-095": [
+        "FMA23942"
+      ],
+      "bone-096": [
+        "FMA23957"
+      ],
+      "bone-097": [
+        "FMA24473"
+      ],
+      "bone-098": [
+        "FMA66791"
+      ],
+      "bone-099": [
+        "FMA23944"
+      ],
+      "bone-100": [
+        "FMA23959"
+      ],
+      "bone-101": [
+        "FMA16587"
+      ],
+      "bone-102": [
+        "FMA24475"
+      ],
+      "bone-103": [
+        "FMA24487"
+      ],
+      "bone-104": [
+        "FMA24478"
+      ],
+      "bone-105": [
+        "FMA24481"
+      ],
+      "bone-106": [
+        "FMA24483"
+      ],
+      "bone-107": [
+        "FMA24498"
+      ],
+      "bone-108": [
+        "FMA24501"
+      ],
+      "bone-109": [
+        "FMA24529"
+      ],
+      "bone-110": [
+        "FMA24522"
+      ],
+      "bone-111": [
+        "FMA24524"
+      ],
+      "bone-112": [
+        "FMA24526"
+      ],
+      "bone-113": [
+        "FMA24508"
+      ],
+      "bone-114": [
+        "FMA43254"
+      ],
+      "bone-115": [
+        "FMA32651"
+      ],
+      "bone-116": [
+        "FMA24510"
+      ],
+      "bone-117": [
+        "FMA32635"
+      ],
+      "bone-118": [
+        "FMA32643"
+      ],
+      "bone-119": [
+        "FMA32653"
+      ],
+      "bone-120": [
+        "FMA24512"
+      ],
+      "bone-121": [
+        "FMA32637"
+      ],
+      "bone-122": [
+        "FMA32645"
+      ],
+      "bone-123": [
+        "FMA32655"
+      ],
+      "bone-124": [
+        "FMA24514"
+      ],
+      "bone-125": [
+        "FMA32639"
+      ],
+      "bone-126": [
+        "FMA32647"
+      ],
+      "bone-127": [
+        "FMA32657"
+      ],
+      "bone-128": [
+        "FMA24516"
+      ],
+      "bone-129": [
+        "FMA32641"
+      ],
+      "bone-130": [
+        "FMA230988"
+      ],
+      "bone-131": [
+        "FMA32659"
+      ],
+      "bone-132": [
+        "FMA7857"
+      ],
+      "bone-133": [
+        "FMA7882"
+      ],
+      "bone-134": [
+        "FMA7909"
+      ],
+      "bone-135": [
+        "FMA7957"
+      ],
+      "bone-136": [
+        "FMA8066"
+      ],
+      "bone-137": [
+        "FMA8175"
+      ],
+      "bone-138": [
+        "FMA8229"
+      ],
+      "bone-139": [
+        "FMA8283"
+      ],
+      "bone-140": [
+        "FMA8364"
+      ],
+      "bone-141": [
+        "FMA8445"
+      ],
+      "bone-142": [
+        "FMA8531"
+      ],
+      "bone-143": [
+        "FMA8533"
+      ],
+      "bone-144": [
+        "FMA13322"
+      ],
+      "bone-145": [
+        "FMA13395"
+      ],
+      "bone-146": [
+        "FMA23130"
+      ],
+      "bone-147": [
+        "FMA23464"
+      ],
+      "bone-148": [
+        "FMA23467"
+      ],
+      "bone-149": [
+        "FMA24435"
+      ],
+      "bone-150": [
+        "FMA24437"
+      ],
+      "bone-151": [
+        "FMA24439"
+      ],
+      "bone-152": [
+        "FMA24441"
+      ],
+      "bone-153": [
+        "FMA24443"
+      ],
+      "bone-154": [
+        "FMA23725"
+      ],
+      "bone-155": [
+        "FMA24446"
+      ],
+      "bone-156": [
+        "FMA24448"
+      ],
+      "bone-157": [
+        "FMA24464"
+      ],
+      "bone-158": [
+        "FMA24450"
+      ],
+      "bone-159": [
+        "FMA24459"
+      ],
+      "bone-160": [
+        "FMA24466"
+      ],
+      "bone-161": [
+        "FMA24451"
+      ],
+      "bone-162": [
+        "FMA24455"
+      ],
+      "bone-163": [
+        "FMA24460"
+      ],
+      "bone-164": [
+        "FMA24468"
+      ],
+      "bone-165": [
+        "FMA24452"
+      ],
+      "bone-166": [
+        "FMA24456"
+      ],
+      "bone-167": [
+        "FMA24461"
+      ],
+      "bone-168": [
+        "FMA24470"
+      ],
+      "bone-169": [
+        "FMA24453"
+      ],
+      "bone-170": [
+        "FMA24457"
+      ],
+      "bone-171": [
+        "FMA24462"
+      ],
+      "bone-172": [
+        "FMA24472"
+      ],
+      "bone-173": [
+        "FMA24454"
+      ],
+      "bone-174": [
+        "FMA24458"
+      ],
+      "bone-175": [
+        "FMA24463"
+      ],
+      "bone-176": [
+        "FMA16586"
+      ],
+      "bone-177": [
+        "FMA24474"
+      ],
+      "bone-178": [
+        "FMA24486"
+      ],
+      "bone-179": [
+        "FMA24477"
+      ],
+      "bone-180": [
+        "FMA24480"
+      ],
+      "bone-181": [
+        "FMA24482"
+      ],
+      "bone-182": [
+        "FMA24497"
+      ],
+      "bone-183": [
+        "FMA24500"
+      ],
+      "bone-184": [
+        "FMA24528"
+      ],
+      "bone-185": [
+        "FMA24521"
+      ],
+      "bone-186": [
+        "FMA24523"
+      ],
+      "bone-187": [
+        "FMA24525"
+      ],
+      "bone-188": [
+        "FMA24507"
+      ],
+      "bone-189": [
+        "FMA43253"
+      ],
+      "bone-190": [
+        "FMA32650"
+      ],
+      "bone-191": [
+        "FMA24509"
+      ],
+      "bone-192": [
+        "FMA32634"
+      ],
+      "bone-193": [
+        "FMA32642"
+      ],
+      "bone-194": [
+        "FMA32652"
+      ],
+      "bone-195": [
+        "FMA24511"
+      ],
+      "bone-196": [
+        "FMA32636"
+      ],
+      "bone-197": [
+        "FMA32644"
+      ],
+      "bone-198": [
+        "FMA32654"
+      ],
+      "bone-199": [
+        "FMA24513"
+      ],
+      "bone-200": [
+        "FMA32638"
+      ],
+      "bone-201": [
+        "FMA32646"
+      ],
+      "bone-202": [
+        "FMA32656"
+      ],
+      "bone-203": [
+        "FMA24515"
+      ],
+      "bone-204": [
+        "FMA32640"
+      ],
+      "bone-205": [
+        "FMA230986"
+      ],
+      "bone-206": [
+        "FMA32658"
+      ]
+    },
+    "organs": {
+      "stomach": [
+        "FMA7148"
+      ],
+      "liver": [
+        "FMA7197"
+      ],
+      "gallbladder": [
+        "FMA7202"
+      ],
+      "pancreas, nsn": [
+        "FMA7198nsn"
+      ],
+      "spleen": [
+        "FMA7196"
+      ],
+      "right kidney": [
+        "FMA7204"
+      ],
+      "left kidney": [
+        "FMA7205"
+      ],
+      "urinary bladder": [
+        "FMA15900"
+      ],
+      "right adrenal gland": [
+        "FMA15629"
+      ],
+      "left adrenal gland": [
+        "FMA15630"
+      ],
+      "right testis": [
+        "FMA7211"
+      ],
+      "left testis": [
+        "FMA7212"
+      ],
+      "prostate": [
+        "FMA9600"
+      ],
+      "cerebellum": [
+        "FMA67944"
+      ],
+      "pituitary gland": [
+        "FMA13889"
+      ],
+      "upper lobe of left lung": [
+        "FMA7370"
+      ],
+      "lower lobe of left lung": [
+        "FMA7371"
+      ],
+      "upper lobe of right lung": [
+        "FMA7333"
+      ],
+      "middle lobe of lung": [
+        "FMA7383"
+      ],
+      "lower lobe of right lung": [
+        "FMA7337"
+      ],
+      "wall of heart": [
+        "FMA7274"
+      ],
+      "esophagus": [
+        "FMA7131"
+      ],
+      "trachea": [
+        "FMA7394"
+      ],
+      "duodenum": [
+        "FMA7206"
+      ],
+      "rectum": [
+        "FMA14544"
+      ]
+    }
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "zZipSha256": "e029688545627bd0214b269e1063143abb580aad72b2c2445d6d8a9a0d9da736",
+  "splZipSha256": "4e96855faf52b0432b7324b2e4f5508536d53fdeadd090439e292e93ae3fd737",
+  "surfaces": {
+    "ZA/Coccyx": {
+      "source": "Z-Anatomy 2023-05-02",
+      "object": "Coccyx",
+      "license": "CC BY-SA 4.0",
+      "triangles": 1166
+    },
+    "ZA/Pineal gland": {
+      "source": "Z-Anatomy 2023-05-02",
+      "object": "Pineal gland",
+      "license": "CC BY-SA 4.0",
+      "triangles": 634
+    },
+    "ZA/Left lobe of thymus": {
+      "source": "Z-Anatomy 2023-05-02",
+      "object": "Left lobe of thymus",
+      "license": "CC BY-SA 4.0",
+      "triangles": 9188
+    },
+    "ZA/Right lobe of thymus": {
+      "source": "Z-Anatomy 2023-05-02",
+      "object": "Right lobe of thymus",
+      "license": "CC BY-SA 4.0",
+      "triangles": 6452
+    },
+    "ZA/Left atrium": {
+      "source": "Z-Anatomy 2023-05-02",
+      "object": "Left atrium",
+      "license": "CC BY-SA 4.0",
+      "triangles": 5105
+    },
+    "ZA/Right atrium": {
+      "source": "Z-Anatomy 2023-05-02",
+      "object": "Right atrium",
+      "license": "CC BY-SA 4.0",
+      "triangles": 5641
+    },
+    "ZA/Left ventricle": {
+      "source": "Z-Anatomy 2023-05-02",
+      "object": "Left ventricle",
+      "license": "CC BY-SA 4.0",
+      "triangles": 5532
+    },
+    "ZA/Right ventricle": {
+      "source": "Z-Anatomy 2023-05-02",
+      "object": "Right ventricle",
+      "license": "CC BY-SA 4.0",
+      "triangles": 5533
+    },
+    "ZA/Ascending colon": {
+      "source": "Z-Anatomy 2023-05-02",
+      "object": "Ascending colon",
+      "license": "CC BY-SA 4.0",
+      "triangles": 539
+    },
+    "ZA/Transverse colon": {
+      "source": "Z-Anatomy 2023-05-02",
+      "object": "Transverse colon",
+      "license": "CC BY-SA 4.0",
+      "triangles": 511
+    },
+    "ZA/Descending colon": {
+      "source": "Z-Anatomy 2023-05-02",
+      "object": "Descending colon",
+      "license": "CC BY-SA 4.0",
+      "triangles": 765
+    },
+    "ZA/Sigmoid colon": {
+      "source": "Z-Anatomy 2023-05-02",
+      "object": "Sigmoid colon",
+      "license": "CC BY-SA 4.0",
+      "triangles": 1665
+    },
+    "SPL/Right0": {
+      "source": "SPL Inner Ear Atlas, February 2018",
+      "file": "inner-ear-2018-02/models/Model_140_Malleus_Bone.vtk",
+      "mirrored": false,
+      "triangles": 4260,
+      "license": "3D Slicer License section B"
+    },
+    "SPL/Right1": {
+      "source": "SPL Inner Ear Atlas, February 2018",
+      "file": "inner-ear-2018-02/models/Model_14_Incus_Bone.vtk",
+      "mirrored": false,
+      "triangles": 3598,
+      "license": "3D Slicer License section B"
+    },
+    "SPL/Right2": {
+      "source": "SPL Inner Ear Atlas, February 2018",
+      "file": "inner-ear-2018-02/models/Model_17_Stapes_Bone.vtk",
+      "mirrored": false,
+      "triangles": 5448,
+      "license": "3D Slicer License section B"
+    },
+    "SPL/Left0": {
+      "source": "SPL Inner Ear Atlas, February 2018",
+      "file": "inner-ear-2018-02/models/Model_140_Malleus_Bone.vtk",
+      "mirrored": true,
+      "triangles": 4260,
+      "license": "3D Slicer License section B"
+    },
+    "SPL/Left1": {
+      "source": "SPL Inner Ear Atlas, February 2018",
+      "file": "inner-ear-2018-02/models/Model_14_Incus_Bone.vtk",
+      "mirrored": true,
+      "triangles": 3598,
+      "license": "3D Slicer License section B"
+    },
+    "SPL/Left2": {
+      "source": "SPL Inner Ear Atlas, February 2018",
+      "file": "inner-ear-2018-02/models/Model_17_Stapes_Bone.vtk",
+      "mirrored": true,
+      "triangles": 5448,
+      "license": "3D Slicer License section B"
+    }
+  }
+}

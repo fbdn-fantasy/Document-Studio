@@ -1,0 +1,19 @@
+{
+  "source": "https://doi.org/10.6084/m9.figshare.26082811",
+  "archive": "Skull volumes.zip",
+  "archiveMD5": "1e4af31c37d6865ac55e1128024de0af",
+  "publication": "https://doi.org/10.1038/s41597-024-03572-x",
+  "license": "CC0 1.0",
+  "specimens": {
+    "dog/skull": {
+      "id": "015_C_BEAG",
+      "breed": "Beagle",
+      "sha256": "d9fec11ed65933193dd9efa3a3535b2931ff0d59bccfb43ea0b054da9c60f261"
+    },
+    "cat/skull": {
+      "id": "162_C_EUSH",
+      "breed": "European shorthair cat",
+      "sha256": "93be14abaf8abada9f4c878070309d7f709133a36834254eb35069db9735b835"
+    }
+  }
+}

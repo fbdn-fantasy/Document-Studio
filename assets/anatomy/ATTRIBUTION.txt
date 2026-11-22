@@ -1,0 +1,18 @@
+BodyParts3D, © The Database Center for Life Science (DBCLS), licensed under CC Attribution-Share Alike 2.1 Japan.
+https://creativecommons.org/licenses/by-sa/2.1/jp/
+Archive DOI https://doi.org/10.18908/lsdba.nbdc00837-000
+Mitsuhashi N et al. BodyParts3D: 3D structure database for anatomical concepts. Nucleic Acids Research 37 (2009), D782–D785. https://doi.org/10.1093/nar/gkn613
+3.0 (20110915), 95% polygon reduction set, STL conversion by Kevin-Mattheus-Moerman/BodyParts3D, https://github.com/Kevin-Mattheus-Moerman/BodyParts3D .
+The BodyParts3D meshes in surfaces.js remain available under CC BY-SA 2.1 Japan. Coordinate conversion, indexed triangles, quantized positions, computed normals and curvature shading, reduced overview copies and catalog mappings were added. The close-up meshes retain the upstream triangles.
+
+Z-Anatomy – The libre 3D atlas of anatomy – CC BY-SA 4.0. Gauthier Kervyn and contributors, derived from BodyParts3D © DBCLS. https://github.com/Z-Anatomy/Models-of-human-anatomy · https://creativecommons.org/licenses/by-sa/4.0/
+The ZA/ meshes in supplement.js retain CC BY-SA 4.0. The coccyx and selected trunk/heart models were extracted, triangulated, indexed, shaded and registered for display. Z-Anatomy's ear and kidney materials were excluded. See Z-Anatomy-LICENSE.txt for upstream credits. Medical system views fit standalone organs to legacy locations and illustrative scales.
+
+SPL Inner Ear Atlas (February 2018), Sonke Bartling (DKFZ), Marianna Jakab and Ron Kikinis (SPL). German Cancer Research Center and the Surgical Planning Laboratory, Brigham and Women's Hospital/Harvard Medical School. Reused under Part B of the 3D Slicer Contribution and Software License Agreement; see SPL-LICENSE.txt.
+https://www.openanatomy.org/atlas-pages/atlas-spl-inner-ear.html
+The SPL/ meshes in supplement.js come from the three CT-segmented ossicles. Their relative arrangement is retained. One uniform scale sets a representative malleus length of 7.8 mm. The chain is registered to each temporal region and mirrored for the opposite side. These are illustrative registrations between different specimens.
+
+Domestic dog and cat skulls. Czeibert K, Nagy G, Csörgő T, Donkó T, Petneházy Ö, Csóka Á, Garamszegi LZ, Kolm N, Kubinyi E. High-resolution computed tomographic (HRCT) image series from 413 canid and 18 felid skulls. Scientific Data (2024). https://doi.org/10.1038/s41597-024-03572-x . Source volumes CC0, https://doi.org/10.6084/m9.figshare.26082811 .
+European shorthair cat (162_C_EUSH) and beagle (015_C_BEAG). Original volume checksums are recorded in animal-skulls.js. Bone and teeth were extracted at 375 HU, smoothed, reduced to inspection and overview resolutions, and aligned with the respective species assembly. This surface segmentation does not identify each cranial bone separately.
+
+Third-party mesh licenses apply independently of the application code license. The bundled source contains the catalog mapping, processed surfaces and build tools.
