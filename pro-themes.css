@@ -1,0 +1,114 @@
+/* These tokens belong to application chrome. Page and drawing colors are intentionally independent. */
+:root {
+  --tooltip-background-color:var(--ui-popover);--tooltip-color:var(--text);--tooltip-border:1px solid var(--border);
+  --keyboard-background:var(--surface);--keyboard-accent-color:var(--accent);--keyboard-border:1px solid var(--border);--keyboard-toolbar-text:var(--text);--keyboard-toolbar-text-active:var(--ui-selected-text);--keyboard-toolbar-background:var(--surface);--keyboard-toolbar-background-hover:var(--ui-hover);--keyboard-toolbar-background-selected:var(--ui-selected);
+  --keycap-background:var(--ui-input);--keycap-background-hover:var(--ui-hover);--keycap-background-active:var(--ui-selected);--keycap-background-pressed:var(--ui-selected);--keycap-text:var(--text);--keycap-text-hover:var(--text);--keycap-text-active:var(--ui-selected-text);--keycap-text-pressed:var(--ui-selected-text);--keycap-border:1px solid var(--border);--keycap-primary-background:var(--ui-primary);--keycap-primary-text:var(--ui-primary-text);--keycap-secondary-background:var(--ui-toolbar);--keycap-secondary-text:var(--text);
+  color-scheme: dark;
+  --ui-toolbar:#1f1235;--ui-workspace:#150b24;--ui-input:#1a0f2e;
+  --ui-hover:#32204a;--ui-pill:#2e1f4a;--ui-selected:#b79aee;--ui-selected-text:#20122f;
+  --ui-selected-border:#d4baff;--ui-focus:#c7a6ff;--ui-primary:#a78bfa;--ui-primary-text:#170b2b;
+  --ui-popover:#25192f;--ui-popover-border:#9871c3;--ui-link:#c6aaff;
+  --ui-ruler:#2e213b;--ui-ruler-text:#eee;--ui-disabled:#9486a3;--ui-seating:#403847;
+  --ui-danger:#ffb4b4;--ui-warning:#efcc83;--ui-shadow:#0006;
+  --design-bg:#201a2b;--design-text:#e6dff1;--design-header:#282031;--design-border:#453751;
+  --design-eyebrow:#c0a1e3;--design-tag:#cab4df;--design-tag-border:#655077;
+  --design-button:#352a41;--design-button-text:#eee6f6;--design-button-border:#5b486d;
+  --design-hover:#493659;--design-hover-border:#a280c6;--design-active:#76519d;--design-active-border:#ac8bcd;--design-active-text:#eee6f6;
+  --design-panel:#251e2f;--design-label:#c9bbd6;--design-input:#1e1927;--design-input-text:#eee7f5;--design-input-border:#534361;
+  --design-accent:#a880ce;--design-heading:#cbb7dd;--design-detail-border:#493952;--design-muted:#b8a8c8;--design-focus:#c5a2ef;--design-pressed:#d7b7ff;
+  --design-stage:#e8edf5;--design-tools:#dddfe9;--design-tools-border:#c6c5d4;--design-tools-text:#4a3d5d;--design-tools-button:#f5f3fa;--design-tools-button-border:#c0b2d0;
+  --design-hint-text:#64677c;--design-hint:#e8eaf1;--design-hint-border:#d6d8e1;
+  --design-footer:#211a2b;--design-footer-border:#44364f;--design-footer-text:#bba8cc;
+  --design-result:#f6f5fa;--design-result-text:#3d3e50;--design-result-border:#c2b3d2;--design-table-border:#d9d5e2;--design-result-label:#625371;
+}
+:root[data-app-theme=light] {
+  color-scheme:light;--bg:#fff;--surface:#fff;--border:#c8c8d2;--text:#24232b;--muted:#5b5668;--accent:#65418b;
+  --ui-toolbar:#fafafa;--ui-workspace:#f2f2f2;--ui-input:#fff;--ui-hover:#eee8f6;--ui-pill:#f2eef8;
+  --ui-selected:#e5d9f6;--ui-selected-text:#342149;--ui-selected-border:#8b6cad;--ui-focus:#725096;--ui-primary:#69448c;--ui-primary-text:#fff;
+  --ui-popover:#fff;--ui-popover-border:#b4a3c7;--ui-link:#603a85;--ui-ruler:#f0edf5;--ui-ruler-text:#40394c;--ui-disabled:#77727f;--ui-seating:#eae7ee;
+  --ui-danger:#a1212b;--ui-warning:#77530e;--ui-shadow:#19233326;
+  --design-bg:#fff;--design-text:#24232b;--design-header:#fff;--design-border:#d1cbd8;
+  --design-eyebrow:#6a4b83;--design-tag:#60467a;--design-tag-border:#bca8cc;
+  --design-button:#fff;--design-button-text:#31273b;--design-button-border:#bfb5ca;
+  --design-hover:#eee8f6;--design-hover-border:#8b6cad;--design-active:#e5d9f6;--design-active-border:#8b6cad;--design-active-text:#342149;
+  --design-panel:#f9f8fb;--design-label:#51485e;--design-input:#fff;--design-input-text:#24232b;--design-input-border:#bfb5ca;
+  --design-accent:#725096;--design-heading:#514062;--design-detail-border:#d1cbd8;--design-muted:#63596e;--design-focus:#725096;--design-pressed:#725096;
+  --design-stage:#e7e8ed;--design-tools:#f4f2f7;--design-tools-border:#cfc8d8;--design-tools-text:#40334e;--design-tools-button:#fff;--design-tools-button-border:#bfb5ca;
+  --design-hint-text:#575164;--design-hint:#f1eef5;--design-hint-border:#d1cbd8;
+  --design-footer:#fff;--design-footer-border:#d1cbd8;--design-footer-text:#63596e;
+  --design-result:#fff;--design-result-text:#24232b;--design-result-border:#cfc8d8;--design-table-border:#d9d4df;--design-result-label:#51485e;
+}
+:root[data-app-theme=dark] {
+  color-scheme:dark;--bg:#000;--surface:#101010;--border:#50555c;--text:#f0f1f3;--muted:#b9bdc4;--accent:#d0d5de;
+  --ui-toolbar:#0b0b0b;--ui-workspace:#000;--ui-input:#191c20;--ui-hover:#363b42;--ui-pill:#30343a;
+  --ui-selected:#4a525c;--ui-selected-text:#fff;--ui-selected-border:#aab5c2;--ui-focus:#d3dce6;--ui-primary:#c7cfd9;--ui-primary-text:#161a1f;
+  --ui-popover:#292d33;--ui-popover-border:#6c7581;--ui-link:#d9e4f1;--ui-ruler:#2b2f35;--ui-ruler-text:#e7ebf1;--ui-disabled:#9298a1;--ui-seating:#343941;
+  --ui-danger:#ffb4b4;--ui-warning:#efcc83;--ui-shadow:#0007;
+  --design-bg:#000;--design-text:#f0f1f3;--design-header:#101010;--design-border:#50555c;
+  --design-eyebrow:#c4cbd4;--design-tag:#c7ced8;--design-tag-border:#69737f;
+  --design-button:#30343a;--design-button-text:#f0f1f3;--design-button-border:#5b626c;
+  --design-hover:#3c424b;--design-hover-border:#98a3b1;--design-active:#4a525c;--design-active-border:#aab5c2;--design-active-text:#fff;
+  --design-panel:#101010;--design-label:#c3c8cf;--design-input:#191c20;--design-input-text:#f0f1f3;--design-input-border:#5b626c;
+  --design-accent:#c7cfd9;--design-heading:#d3d9e1;--design-detail-border:#50555c;--design-muted:#b9bdc4;--design-focus:#d3dce6;--design-pressed:#c7d2df;
+  --design-stage:#1a1d22;--design-tools:#292d33;--design-tools-border:#50555c;--design-tools-text:#edf0f5;--design-tools-button:#353a42;--design-tools-button-border:#67717f;
+  --design-hint-text:#c1c8d1;--design-hint:#24282e;--design-hint-border:#50555c;
+  --design-footer:#202327;--design-footer-border:#50555c;--design-footer-text:#b9bdc4;
+  --design-result:#24272b;--design-result-text:#f0f1f3;--design-result-border:#50555c;--design-table-border:#50555c;--design-result-label:#c3c8cf;
+}
+/* Document bodies have their own paper palette, including native controls embedded in a document. */
+.sheet,.page-marker,.page-body,#editor,.supplied-page {color-scheme:light;--bg:#1a0f2e;--surface:#241538;--border:#3d2a5c;--text:#f0e6ff;--muted:#b8a0d0;--accent:#a78bfa}
+@media screen {
+  #toolbar,#message{background:var(--ui-toolbar)}#viewbar{background:var(--surface)}#editor-wrap{background:var(--ui-workspace)}
+  #titlebar input,#toolbar input,#viewbar input,#side input,dialog input{background-color:var(--ui-input)}
+  .pill{background:var(--ui-pill)}
+  :is(#titlebar,#toolbar,#tabs,#viewbar,#side,dialog,.pro-context,#pro-quickbar,#pro-predict,#design-workspace) :is(button,select):hover:not(:disabled){background-color:var(--ui-hover)}
+  :is(#titlebar,#toolbar,#tabs,#viewbar,#side,dialog,.pro-context,#pro-quickbar,#pro-predict,#design-workspace) button:is(.active,[aria-pressed=true],[aria-selected=true]){background:var(--ui-selected)!important;color:var(--ui-selected-text)!important;border-color:var(--ui-selected-border)!important;box-shadow:inset 0 0 0 1px var(--ui-selected-border)}
+  :is(#titlebar,#toolbar,#viewbar,#side,dialog,.pro-context) .primary{background:var(--ui-primary);color:var(--ui-primary-text)}
+  :is(#titlebar,#toolbar,#tabs,#viewbar,#side,dialog,.pro-context,#design-workspace) :is(button,input,select,textarea,summary,a):focus-visible{outline:2px solid var(--ui-focus);outline-offset:2px}
+  :is(#titlebar,#toolbar,#viewbar,#side,dialog,#design-workspace) :is(button,input,select,textarea):disabled{opacity:.6;cursor:not-allowed}
+  :is(#titlebar,#toolbar,#viewbar,#side,dialog,#design-workspace) :is(input,textarea)::placeholder{color:var(--muted);opacity:.8}
+  :is(#titlebar,#toolbar,#viewbar,#side,dialog,#design-workspace) :is(input[type=checkbox],input[type=radio],input[type=range]){accent-color:var(--accent)}
+  :is(dialog,#side) :is(fieldset,hr){border-color:var(--border)}
+  :is(dialog,#side) a{color:var(--ui-link)}
+  .pro-context,#pro-predict{background:var(--ui-popover)!important;border-color:var(--ui-popover-border)!important;color:var(--text)}
+  #live-ruler{background:var(--ui-ruler);color:var(--ui-ruler-text)}#live-ruler .ticks,#live-ruler .tick{border-color:var(--ui-selected-border)}#ruler-indent{accent-color:var(--ui-focus)}
+  dialog::backdrop{background:rgba(8,10,16,.66)}
+  #desktop-credit{color:var(--muted);font-size:11px;line-height:1.5;font-family:inherit;white-space:nowrap;flex:0 0 auto;cursor:default;user-select:text}
+  .app-theme-setting{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.app-theme-setting select{min-width:180px}
+  .app-about{display:flex;align-items:center;gap:16px}.app-about img{object-fit:contain}.app-about strong{font-size:20px}.app-about p{margin:6px 0}
+  /* MathLive's editor is interface chrome; its rendered formula preview remains paper-colored. */
+  #pro-math-visual{background:var(--ui-input)!important;color:var(--text)!important;--caret-color:var(--accent);--selection-background-color:var(--ui-selected);--selection-color:var(--ui-selected-text);--contains-highlight-background-color:var(--ui-hover)}
+}
+@media screen {
+  #titlebar {justify-content:flex-start}
+  #pro-quick:empty {display:none}
+  #theme-buttons {order:1; margin-inline-start:auto; display:flex; gap:4px; flex:none}
+  #theme-buttons button {min-height:32px; font-weight:600}
+  #theme-buttons button::before {
+    content:""; display:inline-block; width:9px; height:9px; margin-inline-end:5px;
+    border:1px solid currentColor; border-radius:50%; background:var(--theme-swatch); vertical-align:baseline
+  }
+  #theme-buttons [data-theme=light] {--theme-swatch:white}
+  #theme-buttons [data-theme=dark] {--theme-swatch:black}
+  #theme-buttons [data-theme=original] {--theme-swatch:#ab80de}
+  #app-footer {
+    display:grid; grid-template-columns:minmax(0,1fr) auto; grid-template-areas:"message message" "status support";
+    align-items:center; flex:none; background:var(--surface)
+  }
+  #app-footer #message {grid-area:message; min-width:0; overflow-wrap:anywhere}
+  #statusbar {grid-area:status; border:0; min-width:0}
+  #counters {flex-wrap:wrap}
+  #desktop-status {min-width:0; overflow-wrap:anywhere}
+  #desktop-support {
+    grid-area:support; display:inline-flex; align-items:center; justify-content:center; gap:7px;
+    margin:4px 12px 4px 4px; padding:5px 10px; min-height:32px; white-space:nowrap;
+    border:1px solid var(--border); border-radius:6px; color:var(--text);
+    background:var(--ui-input); text-decoration:none; font:600 13px/1.2 Arial,system-ui,sans-serif
+  }
+  #desktop-support img {display:block; object-fit:contain}
+  #desktop-support:hover {background:var(--ui-hover); border-color:var(--ui-selected-border)}
+  #desktop-support:focus-visible {outline:2px solid var(--ui-focus); outline-offset:2px}
+  #pro-help-articles p,#desktop-license {white-space:pre-line; overflow-wrap:anywhere}
+  body.design-mode #app-footer {grid-template-areas:"message support"; background:var(--ui-toolbar)}
+}
+@media print{#app-footer,#desktop-credit,.app-theme-setting{display:none!important}}

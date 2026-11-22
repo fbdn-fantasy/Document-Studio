@@ -1,0 +1,3 @@
+'use strict';
+// Only explicit clicks on these reference publishers can launch a browser.
+exports.referenceURL=value=>{if(typeof value!=='string'||value.length>2048)throw Error('Invalid source URL');const u=new URL(value);if(['https://pubmed.ncbi.nlm.nih.gov/11762491/','https://pubmed.ncbi.nlm.nih.gov/14598386/'].includes(u.href))return u.href;if(u.protocol!=='https:'||u.username||u.password||u.port||!['openstax.org','www.proteinatlas.org'].includes(u.hostname))throw Error('Unsupported source publisher');if(u.hostname==='openstax.org'&&!u.pathname.startsWith('/books/'))throw Error('Unsupported reference path');if(u.hostname==='www.proteinatlas.org'&&!u.pathname.startsWith('/humanproteome/'))throw Error('Unsupported reference path');return u.href;};

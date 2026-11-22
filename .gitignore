@@ -1,0 +1,24 @@
+/node_modules/
+/dist/
+/web-assets/
+/app-resources
+/app-resources-*/
+/release/
+/windows-installer-build/
+/src-tauri/target/
+/src-tauri/gen/
+__pycache__/
+*.pyc
+*.log
+
+# Build-time originals reconstructed from source-parts/.
+.restore-*.tmp
+/assets/vendor/cjk/system_core.dic
+/node-linux/bin/node
+/ocr/models/Formulanet plus s/inference.pdiparams
+/ocr/models/Slanext wired/inference.pdiparams
+/ocr/models/Slanext wireless/inference.pdiparams
+/runtime-linux/lib/python3.12/site-packages/paddle/base/libpaddle.so
+/runtime-linux/lib/python3.12/site-packages/paddle/libs/libmklml_intel.so
+/runtime-linux/lib/python3.12/site-packages/paddle/libs/libphi_core.so
+/runtime/Lib/site-packages/paddle/base/libpaddle.pyd
