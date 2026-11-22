@@ -1,0 +1,122 @@
+{
+  "chunkSize": 50331648,
+  "files": [
+    {
+      "path": "assets/vendor/cjk/system_core.dic",
+      "size": 202236003,
+      "mode": 420,
+      "sha256": "e815659f6ad6f6118725103d47d317d660276ff3a15f668f8fc123ec3c4e6646",
+      "parts": [
+        "411a1e1fb86bc32e4f38d00455f852dc0521c015f4361ae781cff6f9ba52cd0b",
+        "18b11c2256c41c7f442c4b4f9d0e0d538fa71ef95641e35da67300b4eba87009",
+        "b7cf847a704398231e8951e1dcc2e658a00e6cdbe57fba2713ee4cc2bcc1050e",
+        "9d41bdd01fd12b30bfd955aa1cf00fa3c8a0f0f917a39771e6c59e2a82ddfc11",
+        "03e5b61bc24ed978e48611004d27cf8d62fec73cc3876ccae035e0e7cbf5e840"
+      ]
+    },
+    {
+      "path": "node-linux/bin/node",
+      "size": 124909296,
+      "mode": 493,
+      "sha256": "2f822d544601dfff107f57d945b649d15c5bf6302595735a6bd9cdc7ee9669bd",
+      "parts": [
+        "24dd125b8c491f1075c4817090fdc0ff9362dc1b4adcea8cd9fec509d24c23fb",
+        "5d4b13f78e78b6b37401e3958868988f74e09f548d05e55787340a54f8d44228",
+        "014325078e366a7bdf41ac20f0ec575ab32b59f621fcd47e5b0b9fb7b8997ce5"
+      ]
+    },
+    {
+      "path": "ocr/models/Formulanet plus s/inference.pdiparams",
+      "size": 256845006,
+      "mode": 420,
+      "sha256": "e464f94412feaa98f8791eacc84684f887b3569e30e80c52b8112e9cf7d4069b",
+      "parts": [
+        "1a8bb94282fd8dbbdc282cd00b8601218a66b7f55bdfd09fafd2707518aa2a9b",
+        "a544143dd0254cc13feb78713ea7b880c08161f73ff14a27191785a5158e3f2b",
+        "3365e9120812a1a4ca27da329e4abd06f5ad20854056b2d730e85ab924e7b832",
+        "d16dbe729e6de907280a8953b9c5c9471a0f259b57d201dad4c82590e5526916",
+        "e26ccdaa7f8ca80a05dae54c64aa8d89b0f0aaea339204f6a7d30b135593032d",
+        "9411dca81a01856314f2ca1e42ecb74e140daee22fb2df1c0c3bfd280ea8b73b"
+      ]
+    },
+    {
+      "path": "ocr/models/Slanext wired/inference.pdiparams",
+      "size": 364771513,
+      "mode": 420,
+      "sha256": "ff0362a30f707fa7d27d8453c4396b992fca287377a42d01515bca6eeb3908f5",
+      "parts": [
+        "94e039f29eda0160db4b5a27dfc382b1d977c89850afa98ed614386d070b6e21",
+        "4e000b866bb82d4c03e8949c6c3c6ebac64fb8336e3394d1639b42f8476c3b4e",
+        "314f72052b26098ef22e7c47caa66f043ca971cd29082237b0e3bb45be4c1821",
+        "501b130be48909f4bd3ad1346c876b8ee87955e45ed47f7ec8cf63d1485e1c03",
+        "c229be8ab0ac609e459155eae79c314fee0f4e57a7314dc4be7358071d7d6d31",
+        "cec8276d927a8c068a21aa2141eac9907f7d0363eb3a5a8ca021ebf3de415d21",
+        "62667bfa7eadb7a73770673283544651fa6f47ad5c192161cad3736cf27cbf2b",
+        "0405641c2e6496a747c48989cf07dc7b01e7979e19918d7dbcbb2259d25fa54f"
+      ]
+    },
+    {
+      "path": "ocr/models/Slanext wireless/inference.pdiparams",
+      "size": 364771513,
+      "mode": 420,
+      "sha256": "6bf0568e24638491c75920954a92583d8c0d46aa76a2a635fb2fa666ffb618ff",
+      "parts": [
+        "5b0367b4946053c465b65e8879718922a65afebf538f931e73e3aa3c8ee6aad9",
+        "316f52091eb6f11bc9f3cca8c1f994e3eb7aaf75cb81d71292fea86c690271ca",
+        "422ca1a33de3daed6faec18910e7c29b4adf07c79495afcac5d4231e78108b8a",
+        "cc4012762cce5c75975f896bc4a8a59ccdb8fdda82f5f14484c30f1cec9275b2",
+        "40fbddb496d19b2db77953fc0dbcbe373484b7cd7905e01e0e9be4315085afda",
+        "e5b4cdf04c8b5f59eb2dbc88b8a371bce567f509a446e721f21705d94f81d3da",
+        "710380407d78ab17073ad378d3aa67ddd46efdd20b84c8ba0dd68a1e32102375",
+        "a0ca90041e62a2839d8b3d393241b1f18628ebe9e0cca596845b3bc9449d2e8e"
+      ]
+    },
+    {
+      "path": "runtime-linux/lib/python3.12/site-packages/paddle/base/libpaddle.so",
+      "size": 266639768,
+      "mode": 493,
+      "sha256": "0048c8a4fef7a5b22a302dec1c1168b411b736bc1a021e6fa38ae94d7b60905d",
+      "parts": [
+        "edc898003aea2a1d4e24eafe4526bbb497e1a8da2e8613b2c141018a506b183a",
+        "37a95c1d104efdeabdab8d3b48a54f7fa99c4fdffd58ff702d79a86d2b1fac68",
+        "ff5bfa8092e0afe8abd74b3388671b15b048bf534c18d1904c528265e9d76494",
+        "bac2079b3952d0f179630f56bf878719499353ec53c38996b18b8315e13c1093",
+        "c72be0cf738e06d26bf692142616ce98bdde4c72e80e56444400725b3f41af01",
+        "d74908136ec82301fe627eac23c4b54a3591329b8e5f06e77d26e1bbd411199a"
+      ]
+    },
+    {
+      "path": "runtime-linux/lib/python3.12/site-packages/paddle/libs/libmklml_intel.so",
+      "size": 130096544,
+      "mode": 493,
+      "sha256": "51fbd95a70504b0c6b7a1fbc316560580a32bf308cca7af4eea7bacd1e0d137b",
+      "parts": [
+        "e828a0b28b7cb4ad8478db39852272dd4fd11868e336bf709d9952a3c953fec0",
+        "44f14c3d86b9ad01f066964be2f540d71b5c476eef923cc2683019821e15c9b2",
+        "982c29057815e8221d99d4780d7ec9827280faa77f253c356d83c6ab9a1a8e7a"
+      ]
+    },
+    {
+      "path": "runtime-linux/lib/python3.12/site-packages/paddle/libs/libphi_core.so",
+      "size": 118209560,
+      "mode": 493,
+      "sha256": "29d9c0f3f0abf1702876cf2f5a430001036baa22b9be3601de432d103255ddf7",
+      "parts": [
+        "f319a1a724a8ab1fb0a5f09ccb2cbed254e5065908ee063d8a36981c907eda9b",
+        "bf220036454694ecb27dd67c64aa3aadab50b63554203c977c5b7557a10c90d7",
+        "2aaa5954103122781f4353e38429f2244d017d231db3849e99be5f7558a7654e"
+      ]
+    },
+    {
+      "path": "runtime/Lib/site-packages/paddle/base/libpaddle.pyd",
+      "size": 134131200,
+      "mode": 420,
+      "sha256": "c49cd09e49b65059f5f3981ed139d2e6085c7428b28e416e177c9dde8a6cff75",
+      "parts": [
+        "afbaea892858ca000994e1a8def2a890390efd23f2de3123d8f15fc08a96f9a0",
+        "d1460ab597112c72cdf4221b70c7a89ddd437a979ba9aed348872570bd9d8d53",
+        "bbcee2cdb7997e228156b50ad8299c54efb788468150ec5cc20b7365c2f78311"
+      ]
+    }
+  ]
+}
