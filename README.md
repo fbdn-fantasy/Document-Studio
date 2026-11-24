@@ -15,6 +15,7 @@ Create and format documents, import PDFs and scanned pages, prepare and mark edu
 - **Offline Functionality:** Includes the necessary OCR models, dictionaries, fonts, and document-processing resources.
 - **Customizable Appearance:** Choose between Light, Dark, and Purple themes.
 - **Printing:** Print documents directly from the application.
+- **Built-in Updater:** Manually check for, download, and install new updates directly from the application.
 
 ## Download & Installation
 
@@ -33,7 +34,7 @@ Download the latest available version from the **[GitHub Releases](../../release
 
 ## Open Source
 
-Document Studio's original source code is licensed under the **Apache License 2.0**.
+Document Studio's original source code is licensed under the **GNU Affero General Public License v3.0 (AGPL-3.0)**.
 
 Third-party libraries, models, and other bundled resources retain their respective licenses.
 
