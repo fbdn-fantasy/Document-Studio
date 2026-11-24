@@ -789,7 +789,7 @@ dependencies = [
 
 [[package]]
 name = "document-studio"
-version = "24.0.0"
+version = "1.0.0"
 dependencies = [
  "dunce",
  "gtk",

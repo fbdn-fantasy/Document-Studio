@@ -19,6 +19,7 @@ switch=$(mktemp -d -- "$base/.select-XXXXXXXX")
 trap 'rm -rf -- "$switch"; if [[ ! -e "$release/.installed" ]]; then rm -rf -- "$release"; fi' EXIT
 chmod 755 "$release"
 tar --extract --gzip --file="$here/payload.tar.gz" --directory="$release" --no-same-owner --no-same-permissions
+printf 'tar\n' > "$release/usr/lib/Document Studio/update-format"
 # Preserve an existing file installed by another package in the same prefix.
 files=(bin/document-studio share/applications/document-studio.desktop)
 for file in "$release"/usr/share/icons/hicolor/*/apps/document-studio.png; do

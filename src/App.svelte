@@ -25,7 +25,11 @@
    void reveal();
  }
  onMount(()=>{
-   try{document.documentElement.dataset.appTheme=localStorage.getItem('document-studio-application-theme')||'original';}catch{}
+   try{
+     const theme=localStorage.getItem('document-studio-application-theme');
+     document.documentElement.dataset.appTheme=theme && ['light','dark','original'].includes(theme)
+       ? theme : window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
+   }catch{}
    installBridge(requestPrintOptions).then(()=>ready=true).catch(e=>{error=String(e);void reveal();});
  });
 </script>

@@ -24,7 +24,7 @@ async function checkLayout(frame) {
   const errors = await frame.evaluate(() => {
     const issues = [];
     const visible = node => node.getBoundingClientRect().width && node.getBoundingClientRect().height;
-    const buttons = [...document.querySelectorAll('#titlebar button,#desktop-support,#titlebar input:not([hidden]),#statusbar button,#statusbar .pill,#desktop-credit,#desktop-status')].filter(visible);
+    const buttons = [...document.querySelectorAll('#titlebar button,#desktop-update,#desktop-support,#titlebar input:not([hidden]),#statusbar button,#statusbar .pill,#desktop-credit,#desktop-status')].filter(visible);
     for (const [i, first] of buttons.entries()) {
       const a = first.getBoundingClientRect();
       for (const second of buttons.slice(i+1)) {
@@ -34,6 +34,10 @@ async function checkLayout(frame) {
       }
     }
     const support = document.getElementById('desktop-support').getBoundingClientRect();
+    const update = document.getElementById('desktop-update').getBoundingClientRect();
+    const credit = document.getElementById('desktop-credit').getBoundingClientRect();
+    if (update.right > credit.left || credit.right > support.left || update.top >= credit.bottom || credit.top >= update.bottom)
+      issues.push('Update, creator credit and support are out of order');
     if (innerWidth - support.right > 20 || innerHeight - support.bottom > 28 || support.bottom > innerHeight)
       issues.push('Support link is outside the bottom-right corner');
     const theme = document.getElementById('theme-buttons').getBoundingClientRect();
@@ -48,14 +52,22 @@ async function checkLayout(frame) {
   await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
   let browser, savedTheme;
   let supportOpens = 0;
+  let updateAvailable = false;
+  const updateCalls = [];
   try {
-    browser = await chromium.launch({headless:true, args:['--no-sandbox']});
+    browser = await chromium.launch({headless:true,channel:process.env.DOCUMENT_STUDIO_BROWSER_CHANNEL, args:['--no-sandbox']});
     async function launch() {
-      const context = await browser.newContext({viewport:{width:1280, height:850}});
+      const context = await browser.newContext({viewport:{width:1280, height:850},colorScheme:'light'});
       await context.exposeFunction('nativeInvoke', async (command, params) => {
         if (command === 'open_support_page') {supportOpens++; return null;}
         if (command !== 'desktop_command') return null;
         switch (params.method) {
+          case 'checkForUpdate':
+            updateCalls.push(params.method);
+            return {available:updateAvailable,currentVersion:'1.0.0',version:updateAvailable?'1.0.1':'1.0.0'};
+          case 'downloadUpdate': case 'installUpdate': case 'close':
+            updateCalls.push(params.method);
+            return null;
           case 'init': return {settings:{autosave:false, theme:savedTheme}, startup:false, recoveryAvailable:false};
           case 'settings':
             if (params.args[0].theme) savedTheme = params.args[0].theme;
@@ -69,6 +81,7 @@ async function checkLayout(frame) {
         window.__TAURI_INTERNALS__ = {transformCallback:()=>1,invoke:async(command, params)=>{
           if(command === 'show_main')
             window.themeAtReveal = document.querySelector('iframe').contentDocument.documentElement.dataset.appTheme;
+          if(command === 'finish_close') window.updateClosedEditor = true;
           return window.nativeInvoke(command,params);
         }};
       });
@@ -83,9 +96,34 @@ async function checkLayout(frame) {
     }
 
     let {context,page,frame,errors} = await launch();
-    assert.equal(await page.evaluate(() => window.themeAtReveal),'original');
+    assert.equal(await page.evaluate(() => window.themeAtReveal),'light');
     const themes = frame.locator('#theme-buttons');
-    assert.deepEqual(await themes.locator('button').allTextContents(),['Light','Dark','Purple']);
+    assert.deepEqual(await themes.locator('button').allTextContents(),['System','Light','Dark','Purple']);
+    assert.equal(await themes.locator('button[aria-pressed=true]').innerText(),'System');
+    await page.emulateMedia({colorScheme:'dark'});
+    await page.waitForFunction(()=>document.documentElement.dataset.appTheme==='dark');
+    const update = frame.getByRole('button',{name:'Check for updates',exact:true});
+    const dialog = frame.getByRole('dialog',{name:'Software update'});
+    assert.deepEqual(updateCalls,[]);
+    await update.focus();
+    await page.keyboard.press('Enter');
+    await dialog.getByText('Document Studio V1.0.0 is up to date.').waitFor();
+    await page.keyboard.press('Escape');
+    updateAvailable = true;
+    await update.click();
+    await dialog.getByRole('button',{name:'Download update'}).waitFor();
+    await dialog.getByRole('button',{name:'Close',exact:true}).click();
+    assert.deepEqual(updateCalls,['checkForUpdate','checkForUpdate']);
+    await update.click();
+    await dialog.getByRole('button',{name:'Download update'}).click();
+    await dialog.getByRole('button',{name:'Install and close'}).waitFor();
+    assert.deepEqual(updateCalls.slice(-2),['checkForUpdate','downloadUpdate']);
+    await dialog.getByRole('button',{name:'Close',exact:true}).click();
+    await update.click();
+    await dialog.getByRole('button',{name:'Install and close'}).click();
+    await page.waitForFunction(()=>window.updateClosedEditor);
+    await dialog.evaluate(d=>d.close()); // Mocked installer leaves this page open.
+    assert.deepEqual(updateCalls.slice(-2),['installUpdate','close']);
     const support = frame.getByRole('link',{name:'Support Me',exact:true});
     assert.equal(await support.count(),1);
     assert.equal(await support.getAttribute('href'),supportUrl);
@@ -124,11 +162,13 @@ async function checkLayout(frame) {
     assert.equal(await page.evaluate(()=>window.themeAtReveal),'dark');
     assert.equal(await frame.locator('#theme-buttons [aria-pressed=true]').innerText(),'Dark');
     await frame.locator('#btn-help').click();
-    await frame.getByRole('textbox',{name:'Search help'}).fill('Apache License');
-    assert.match(await frame.locator('#pro-help-articles').innerText(),/Copyright 2026 Forbidden_Fantasy/);
+    await frame.getByRole('textbox',{name:'Search help'}).fill('AGPL-3.0-only');
+    const license = await frame.locator('#pro-help-articles').innerText();
+    assert.match(license,/Copyright \(C\) 2026 Forbidden_Fantasy/);
+    assert.match(license,/GNU AFFERO GENERAL PUBLIC LICENSE/);
     assert.deepEqual(errors,[]);
     await context.close();
-    console.log('PASS fresh purple and saved dark at reveal, three palettes, print settings, logo and native support action, editor/design placement at 640/900/1280 px, bundled license.');
+    console.log('PASS manual update check, download and install confirmations, system appearance and saved theme, print settings, native support action, editor/design footer at 640/900/1280 px, bundled license and notice.');
   } finally {
     if (browser) await browser.close();
     await new Promise(resolve=>server.close(resolve));

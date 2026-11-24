@@ -15,7 +15,7 @@ def stage_web():
     if web.exists():
         shutil.rmtree(web)
     web.mkdir()
-    for pattern in ('editor.html', 'LICENSE', 'desktop.js', 'controls.js', 'language-tools.js',
+    for pattern in ('editor.html', 'LICENSE', 'NOTICE', 'desktop.js', 'controls.js', 'language-tools.js',
                     'pro*.js', 'pro*.css', 'studio-*.js', 'studio-*.css'):
         for source in ROOT.glob(pattern):
             shutil.copy2(source, web / source.name)
@@ -28,9 +28,9 @@ def stage_resources(platform):
     if resources.exists():
         shutil.rmtree(resources)
     resources.mkdir()
-    for name in ('desktop-service.cjs', 'storage.cjs', 'dictionary-client.cjs', 'dictionary-worker.cjs',
+    for name in ('desktop-service.cjs', 'app-update.cjs', 'storage.cjs', 'dictionary-client.cjs', 'dictionary-worker.cjs',
                  'dictionaries.cjs', 'cjk.cjs', 'sudachi.cjs', 'import-manager.cjs', 'medical-sources.cjs',
-                 'LICENSE', 'THIRD-PARTY-NOTICES.md'):
+                 'LICENSE', 'NOTICE', 'THIRD-PARTY-NOTICES.md'):
         shutil.copy2(ROOT / name, resources / name)
     for name in ('assets', 'notices', 'ocr', 'import-engine'):
         shutil.copytree(ROOT / name, resources / name, ignore=SKIP_CACHE)

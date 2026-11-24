@@ -12,7 +12,8 @@ root=Path(__file__).resolve().parent.parent
 target_dir=Path(os.environ.get('CARGO_TARGET_DIR', root/'src-tauri/target')).resolve()
 release=target_dir/'x86_64-pc-windows-msvc/release'
 version=json.loads((root/'package.json').read_text())['version']
-installer_name=f'Document-Studio-Setup-{version}-x64.exe'
+installer_name=f'Document-Studio-V{version}-Setup.exe'
+binary_name=json.loads((root/'src-tauri/tauri.conf.json').read_text())['mainBinaryName']+'.exe'
 nsis=release/'nsis/x64'
 original=nsis/'installer.nsi'
 if not original.exists():raise SystemExit('Generate the Tauri NSIS installer.nsi before running this script.')
@@ -42,22 +43,22 @@ with zipfile.ZipFile(payload) as archive:
  if bad:raise SystemExit('Payload ZIP integrity failure: '+bad)
 print('Verified ZIP payload:',payload.stat().st_size,'bytes,',len(files),'files',flush=True)
 script=original.read_text(encoding='utf-8-sig')
-script=re.sub(r'!define ESTIMATEDSIZE \"[0-9]+\"', '!define ESTIMATEDSIZE \"'+str((expanded_bytes+(release/'document-studio.exe').stat().st_size+1023)//1024)+'\"',script)
+script=re.sub(r'!define ESTIMATEDSIZE \"[0-9]+\"', '!define ESTIMATEDSIZE \"'+str((expanded_bytes+(release/binary_name).stat().st_size+1023)//1024)+'\"',script)
 script=script.replace('Section Install\n','Section Install\n  ; Account for expanded resources while embedded ZIP remains in TEMP.\n  AddSize '+str((expanded_bytes+1023)//1024)+'\n',1)
 script,count=re.subn(r'^[ \t]*SetCompressor(?: /SOLID)? "?[a-z0-9]+"?$', 'SetCompressor zlib', script, flags=re.MULTILINE)
 if count!=1:raise SystemExit('Unexpected NSIS compressor directive. Check the generated installer template.')
-script=script.replace('!define OUTFILE "nsis-output.exe"', '!define OUTFILE "'+(build/installer_name).as_posix()+'"')
+script=script.replace('!define OUTFILE "nsis-output.exe"', '!define OUTFILE "'+str(build/installer_name)+'"')
 bootstrap=resources/'runtime'
 lines=['  ; Offline resources are precompressed to avoid the NSIS 2GiB data limit.',
  '  ClearErrors','  InitPluginsDir','  CreateDirectory "$PLUGINSDIR\\docstudio-python"',
  '  SetOutPath "$PLUGINSDIR\\docstudio-python"']
 for name in ['python.exe','python313.dll','python313.zip','python313._pth','vcruntime140.dll','vcruntime140_1.dll']:
  source=bootstrap/name
- if source.exists():lines.append('  File "/oname='+name+'" "'+source.as_posix()+'"')
+ if source.exists():lines.append('  File "/oname='+name+'" "'+str(source)+'"')
 lines += ['  SetOutPath "$PLUGINSDIR"','  SetCompress off',
- '  File "/oname=app-resources.zip" "'+payload.as_posix()+'"',
+ '  File "/oname=app-resources.zip" "'+str(payload)+'"',
  '  SetCompress auto',
- '  File "/oname=extract-windows-resources.py" "'+(root/'scripts/extract-windows-resources.py').as_posix()+'"',
+ '  File "/oname=extract-windows-resources.py" "'+str(root/'scripts/extract-windows-resources.py')+'"',
  '  IfErrors docstudio_resources_failed',
  '  DetailPrint "Verifying and installing offline OCR resources..."',
  '  ClearErrors',
@@ -78,7 +79,12 @@ uninstall=script.index('Section Uninstall') if 'Section Uninstall' in script els
 insert=script.index('  ; Delete resources',uninstall)
 script=script[:insert]+'  RMDir /r \"$INSTDIR\\app-resources\"\n'+script[insert:]
 custom=nsis/'installer-large.nsi';custom.write_text(script,encoding='utf-8')
-subprocess.run(['makensis','-V2',str(custom)],cwd=nsis,check=True)
+compiler=shutil.which('makensis')
+if not compiler and os.name=='nt':
+ cached=Path(os.environ['LOCALAPPDATA'])/'tauri/NSIS/makensis.exe'
+ if cached.is_file():compiler=str(cached)
+if not compiler:raise SystemExit('Install NSIS or add makensis to PATH.')
+subprocess.run([compiler,'/V2' if os.name=='nt' else '-V2',str(custom)],cwd=nsis,check=True)
 output=build/installer_name
 print('Installer created:',output,output.stat().st_size,'bytes',flush=True)
 

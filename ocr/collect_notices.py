@@ -14,18 +14,28 @@ def sha(path):
 def main():
     deps=[]
     pinned=[]
+    supplied=json.loads((ROOT/'licenses'/'supplemental-sources.json').read_text(encoding='utf-8'))
     for dist in sorted(importlib.metadata.distributions(),key=lambda d:d.metadata['Name'].lower()):
         name=dist.metadata['Name']
         meta=dist.metadata
         record={'name':name,'version':dist.version,'license':meta.get('License-Expression',meta.get('License','See bundled notices')),'notices':[]}
         for path in dist.files or []:
-            if any(token in path.name.lower() for token in ('license','copying','notice','copyright')) and ('.dist-info/' in str(path).replace('\\','/') or path.name=='COPYING'):
+            relative=str(path).replace('\\','/')
+            is_notice=any(token in path.name.lower() for token in ('license','licence','copying','notice','copyright'))
+            if (is_notice and ('.dist-info/' in relative or path.name=='COPYING')) or '.dist-info/licenses/LICENSES/' in relative:
                 origin=Path(dist.locate_file(path))
                 if not origin.is_file():continue
                 target=ROOT/'licenses'/'packages'/name/str(path).replace('\\','/').split('.dist-info/')[-1]
                 target.parent.mkdir(parents=True,exist_ok=True)
                 shutil.copy2(origin,target)
                 record['notices'].append(str(target.relative_to(APP)).replace('\\','/'))
+        extra=supplied.get(name)
+        if extra and extra['version']==dist.version:
+            for relative,digest in extra['files'].items():
+                target=ROOT/'licenses'/'packages'/name/relative
+                if sha(target)!=digest:raise ValueError(f'Unexpected upstream notice for {name}: {relative}')
+                record['notices'].append(target.relative_to(APP).as_posix())
+            record['license']=extra['license']
         deps.append(record)
         pinned.append(f'{name}=={dist.version}')
     (ROOT/'requirements-lock.txt').write_text('\n'.join(pinned)+'\n',encoding='utf-8')

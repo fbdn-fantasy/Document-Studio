@@ -3,11 +3,13 @@ import hashlib,json,os,subprocess,sys,zipfile
 from pathlib import Path
 installer=Path(sys.argv[1]).resolve(strict=True)
 payload=Path(sys.argv[2]).resolve(strict=True)
+root=Path(__file__).resolve().parent.parent
+application_name=json.loads((root/'src-tauri/tauri.conf.json').read_text())['mainBinaryName']+'.exe'
 if installer.open('rb').read(2)!=b'MZ':raise SystemExit('Not a Windows PE installer')
 result=subprocess.run(['7z','l','-slt',str(installer)],text=True,capture_output=True,check=True)
 entries=[line[7:].replace('\\','/') for line in result.stdout.splitlines() if line.startswith('Path = ')]
 payload_entry=next((p for p in entries if p.endswith('app-resources.zip')),None)
-checks={'native_executable':any(p.lower().endswith('document-studio.exe') for p in entries),'embedded_resource_zip':bool(payload_entry),'bootstrap_python':any(p.lower().endswith('docstudio-python/python.exe') for p in entries)}
+checks={'native_executable':any(Path(p).name.casefold()==application_name.casefold() for p in entries),'embedded_resource_zip':bool(payload_entry),'bootstrap_python':any(p.lower().endswith('docstudio-python/python.exe') for p in entries)}
 with zipfile.ZipFile(payload) as archive:
  names=archive.namelist()
  checks.update({
@@ -19,6 +21,8 @@ with zipfile.ZipFile(payload) as archive:
   'ocr_models':any('/ocr/models/' in p and p.endswith('inference.pdiparams') for p in names),
   'runtime_manifest':'app-resources/runtime-manifest.json' in names,
   'application_license':archive.read('app-resources/LICENSE')==Path(__file__).resolve().parent.parent.joinpath('LICENSE').read_bytes(),
+  'application_notice':archive.read('app-resources/NOTICE')==Path(__file__).resolve().parent.parent.joinpath('NOTICE').read_bytes(),
+  'manual_updater':archive.read('app-resources/app-update.cjs')==Path(__file__).resolve().parent.parent.joinpath('app-update.cjs').read_bytes(),
   'third_party_notices':'app-resources/THIRD-PARTY-NOTICES.md' in names,
  })
  payload_files=len(names)
@@ -29,10 +33,9 @@ if payload_entry:
  stream=subprocess.Popen(['7z','x','-so',str(installer),payload_entry],stdout=subprocess.PIPE,stderr=subprocess.PIPE)
  actual=hashlib.file_digest(stream.stdout,'sha256').hexdigest();stream.stdout.close();error=stream.stderr.read();stream.stderr.close();code=stream.wait()
  checks['embedded_payload_exact_hash']=code==0 and actual==expected
-main_entry=next(p for p in entries if p.lower().endswith('document-studio.exe'))
-root=Path(__file__).resolve().parent.parent
+main_entry=next(p for p in entries if Path(p).name.casefold()==application_name.casefold())
 target_dir=Path(os.environ.get('CARGO_TARGET_DIR',root/'src-tauri/target')).resolve()
-main_file=target_dir/'x86_64-pc-windows-msvc/release/document-studio.exe'
+main_file=target_dir/'x86_64-pc-windows-msvc/release'/application_name
 main_sha256=hashlib.file_digest(main_file.open('rb'),'sha256').hexdigest()
 main_stream=subprocess.Popen(['7z','x','-so',str(installer),main_entry],stdout=subprocess.PIPE,stderr=subprocess.DEVNULL)
 main_actual=hashlib.file_digest(main_stream.stdout,'sha256').hexdigest();main_stream.stdout.close()

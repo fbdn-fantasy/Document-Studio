@@ -10,6 +10,15 @@
 __pycache__/
 *.pyc
 *.log
+AGENTS.md
+.env
+.env.*
+*.pfx
+*.p12
+*-Source.zip
+*-Setup.exe
+*.deb
+*.rpm
 
 # Build-time originals reconstructed from source-parts/.
 .restore-*.tmp

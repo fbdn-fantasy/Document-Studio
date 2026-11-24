@@ -1,13 +1,14 @@
 /* Application appearance only. Never changes document state, SVG or canvas pixels. */
 'use strict';
 (()=>{
-  const key='document-studio-application-theme', names={original:'Purple (default)',light:'Light',dark:'Dark'};
-  let current='original',serial=0;
+  const key='document-studio-application-theme', names={system:'System',light:'Light',dark:'Dark',original:'Purple'};
+  const systemDark=window.matchMedia('(prefers-color-scheme: dark)');
+  let current='system',serial=0;
   try{const saved=localStorage.getItem(key);if(Object.hasOwn(names,saved))current=saved;}catch{}
   if(Object.hasOwn(names,window.desktop?.initialTheme))current=window.desktop.initialTheme;
   function apply(value,{persist=true,native=true}={}){
-    if(!Object.hasOwn(names,value))value='original';
-    current=value;document.documentElement.dataset.appTheme=value;
+    if(!Object.hasOwn(names,value))value='system';
+    current=value;document.documentElement.dataset.appTheme=value==='system'?(systemDark.matches?'dark':'light'):value;
     for(const button of document.querySelectorAll('#theme-buttons button'))button.setAttribute('aria-pressed',String(button.dataset.theme===value));
     for(const select of document.querySelectorAll('[data-app-theme-selector]'))select.value=value;
     if(persist){serial++;try{localStorage.setItem(key,value);}catch{}}
@@ -38,8 +39,8 @@
       catch{document.getElementById('message').textContent='Could not open your browser. Visit '+support.href;}
     });
     if(window.FTEPro){
-      FTEPro.add('Appearance',()=>{modal('Appearance','<div id="app-appearance-settings"></div>');appendSelector(document.getElementById('app-appearance-settings'));},'View','application theme original purple light dark settings');
-      FTEPro.add('About Document Studio',()=>modal('About Document Studio','<div class="app-about"><img src="assets/icon.png" alt="Document Studio" width="64" height="64"><div><strong>Document Studio</strong><p>Version 24.0.0</p><small>Created by Forbidden_Fantasy</small></div></div><p>Offline document editing, scientific diagrams and educational tools.</p><p class="muted">Existing documents, templates, diagrams and preferences remain compatible. See the bundled license and third-party notices for component terms.</p>'),'Tools','version creator license');
+      FTEPro.add('Appearance',()=>{modal('Appearance','<div id="app-appearance-settings"></div>');appendSelector(document.getElementById('app-appearance-settings'));},'View','application theme system original purple light dark settings');
+      FTEPro.add('About Document Studio',()=>modal('About Document Studio','<div class="app-about"><img src="assets/icon.png" alt="Document Studio" width="64" height="64"><div><strong>Document Studio</strong><p>Version 1.0.0</p><small>Created by Forbidden_Fantasy</small></div></div><p>Offline document editing, scientific diagrams and educational tools.</p><p class="muted">Licensed under the GNU Affero General Public License, version 3 only. See Help for the license and notice.</p>'),'Tools','version creator license');
     }
     if(Object.hasOwn(names,window.desktop?.initialTheme)){
       apply(current,{native:false});
@@ -54,6 +55,7 @@
   }
   window.DocumentStudioTheme={apply,appendSelector,get current(){return current;},names:Object.freeze(names)};
   apply(current,{persist:false,native:false});
+  systemDark.addEventListener('change',()=>{if(current==='system')apply('system',{persist:false,native:false});});
   window.addEventListener('storage',event=>{if(event.key===key)apply(event.newValue,{persist:false,native:true});});
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',install,{once:true});else install();
 })();

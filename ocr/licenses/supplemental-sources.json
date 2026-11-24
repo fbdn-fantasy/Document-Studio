@@ -1,0 +1,40 @@
+{
+  "bce-python-sdk": {
+    "version": "0.9.79",
+    "license": "Apache-2.0",
+    "source": "https://raw.githubusercontent.com/baidubce/bce-sdk-python/6e8d8edca59a1805d6632475d8b1ea613db4d5ce/LICENSE",
+    "files": {
+      "LICENSE": "0cec06e0e55fbc3dc5cee4fca9b607f66cb8f4e4dbcf3b3c013594dd156732e9"
+    }
+  },
+  "latex2mathml": {
+    "version": "3.81.1",
+    "license": "MIT",
+    "source": "https://raw.githubusercontent.com/roniemartinez/latex2mathml/fb724a91658cf41d2fad0192da0845b05446f208/LICENSE",
+    "files": {
+      "LICENSE": "4ac1e1da07f6b343d54191c5e1716840534e08591b3f9eaec90d6800cdc47543"
+    }
+  },
+  "sentencepiece": {
+    "version": "0.2.3",
+    "license": "Apache-2.0",
+    "source": "https://pypi.org/project/sentencepiece/0.2.3/#files",
+    "archive": "sentencepiece-0.2.3.tar.gz",
+    "sha256": "21618ad31f0453a1ebf5ec58defed99758d54af0b670546ecac639ddd8b86fbd",
+    "files": {
+      "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "third_party/darts_clone/LICENSE": "155f59997298ee336602c49f9c1110f268ac394ca2197eb02647a3555935ad52",
+      "third_party/libsais/LICENSE": "e38f5960984c2350dba530a89395789c0ea6039a1b551511b478b94dec1d5dfa"
+    }
+  },
+  "tokenizers": {
+    "version": "0.23.3",
+    "license": "Apache-2.0",
+    "source": "https://pypi.org/project/tokenizers/0.23.3/#files",
+    "archive": "tokenizers-0.23.3.tar.gz",
+    "sha256": "cded33237c77caeef62944d32aa9a7ef42bdce2b3497e18d137e072a8c4be438",
+    "files": {
+      "LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    }
+  }
+}

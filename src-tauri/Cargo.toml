@@ -1,9 +1,9 @@
 [package]
 name = "document-studio"
-version = "24.0.0"
+version = "1.0.0"
 edition = "2021"
 description = "Offline document editor and OCR studio"
-license-file = "../LICENSE"
+license = "AGPL-3.0-only"
 [build-dependencies]
 tauri-build = { version = "2", features = [] }
 [dependencies]

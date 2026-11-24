@@ -42,8 +42,13 @@ with tempfile.TemporaryDirectory(prefix='docstudio-window-test-') as temp:
         assert child.returncode==0
     try:
         w,first=launch()
+        assert first['WIDTH']>1400 and first['HEIGHT']>950, first
         icon=command('xprop','-id',w,'_NET_WM_ICON')
         assert 'not found' not in icon and 'no such atom' not in icon, icon
+        wmclass=command('xprop','-id',w,'WM_CLASS')
+        assert 'document-studio' in wmclass.lower(), wmclass
+        command('wmctrl','-ir',w,'-b','remove,maximized_vert,maximized_horz')
+        time.sleep(.3)
         command('xdotool','windowsize','--sync',w,'1110','760')
         command('xdotool','windowmove','--sync',w,'125','85')
         time.sleep(.3); normal=geometry(w); close(w)
@@ -68,7 +73,7 @@ with tempfile.TemporaryDirectory(prefix='docstudio-window-test-') as temp:
         close(w)
         result={'passed':True,'initial':first,'savedNormal':normal,'firstVisibleRestored':restored,
                 'maximized':maximized,'firstVisibleMaximized':reopenedmax,'unmaximized':unmaximized,
-                'iconPresent':True,'singleInstance':True,
+                'iconPresent':True,'windowClass':wmclass,'singleInstance':True,
                 'observation':'First visible X11 window sampled at 10 ms intervals; normal and maximized geometry checked.'}
         (out/'window-result.json').write_text(json.dumps(result,indent=2));print(json.dumps(result,indent=2))
     finally:

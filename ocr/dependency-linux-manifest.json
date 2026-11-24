@@ -40,7 +40,10 @@
     {
       "name": "bce-python-sdk",
       "version": "0.9.79",
-      "license": "Apache License 2.0"
+      "license": "Apache-2.0",
+      "notices": [
+        "ocr/licenses/packages/bce-python-sdk/LICENSE"
+      ]
     },
     {
       "name": "beautifulsoup4",
@@ -125,7 +128,11 @@
     {
       "name": "et_xmlfile",
       "version": "2.0.0",
-      "license": "MIT"
+      "license": "MIT",
+      "notices": [
+        "ocr/licenses/packages/et_xmlfile/LICENCE.rst",
+        "ocr/licenses/packages/et_xmlfile/LICENCE.python"
+      ]
     },
     {
       "name": "filelock",
@@ -210,7 +217,10 @@
     {
       "name": "latex2mathml",
       "version": "3.81.1",
-      "license": "MIT"
+      "license": "MIT",
+      "notices": [
+        "ocr/licenses/packages/latex2mathml/LICENSE"
+      ]
     },
     {
       "name": "lxml",
@@ -265,7 +275,10 @@
     {
       "name": "openpyxl",
       "version": "3.1.5",
-      "license": "MIT"
+      "license": "MIT",
+      "notices": [
+        "ocr/licenses/packages/openpyxl/LICENCE.rst"
+      ]
     },
     {
       "name": "opt-einsum",
@@ -365,7 +378,12 @@
     {
       "name": "pypdfium2",
       "version": "5.15.2",
-      "license": "BSD-3-Clause, Apache-2.0, dependency licenses"
+      "license": "BSD-3-Clause, Apache-2.0, dependency licenses",
+      "notices": [
+        "ocr/licenses/packages/pypdfium2/licenses/LICENSES/Apache-2.0.txt",
+        "ocr/licenses/packages/pypdfium2/licenses/LICENSES/BSD-3-Clause.txt",
+        "ocr/licenses/packages/pypdfium2/licenses/LICENSES/CC-BY-4.0.txt"
+      ]
     },
     {
       "name": "python-bidi",
@@ -420,7 +438,12 @@
     {
       "name": "sentencepiece",
       "version": "0.2.3",
-      "license": "Apache-2.0"
+      "license": "Apache-2.0",
+      "notices": [
+        "ocr/licenses/packages/sentencepiece/LICENSE",
+        "ocr/licenses/packages/sentencepiece/third_party/darts_clone/LICENSE",
+        "ocr/licenses/packages/sentencepiece/third_party/libsais/LICENSE"
+      ]
     },
     {
       "name": "setuptools",
@@ -455,12 +478,18 @@
     {
       "name": "tokenizers",
       "version": "0.23.3",
-      "license": "See package notices"
+      "license": "Apache-2.0",
+      "notices": [
+        "ocr/licenses/packages/tokenizers/LICENSE"
+      ]
     },
     {
       "name": "tqdm",
       "version": "4.70.1",
-      "license": "MPL-2.0 AND MIT"
+      "license": "MPL-2.0 AND MIT",
+      "notices": [
+        "ocr/licenses/packages/tqdm/licenses/LICENCE"
+      ]
     },
     {
       "name": "truststore",

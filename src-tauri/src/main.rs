@@ -29,9 +29,12 @@ fn native(app:&tauri::AppHandle,m:&Value)->Result<Value,String>{
 }
 #[tauri::command]
 async fn desktop_command(method:String,args:Vec<Value>,state:tauri::State<'_,Service>)->Result<Value,String>{
- const ALLOWED:&[&str]=&["addPersonal","suggestCJK","analyzeCJK","documentInfo","init","ackRecovery","open","chooseImport","runImport","cancelImport","importHealth","repairImport","commitOpen","save","saveDocument","export","pdfBytes","pdf","snapshot","recoveries","recover","settings","confirm","dirty","close","recent","openMedicalSource","dictionaries","dictionary","importDictionary","fonts","spell","spellSuggestions"];
+ const ALLOWED:&[&str]=&["checkForUpdate","downloadUpdate","installUpdate","addPersonal","suggestCJK","analyzeCJK","documentInfo","init","ackRecovery","open","chooseImport","runImport","cancelImport","importHealth","repairImport","commitOpen","save","saveDocument","export","pdfBytes","pdf","snapshot","recoveries","recover","settings","confirm","dirty","close","recent","openMedicalSource","dictionaries","dictionary","importDictionary","fonts","spell","spellSuggestions"];
  if !ALLOWED.contains(&method.as_str()){return Err("Unsupported command".into())}
  let id=state.sequence.fetch_add(1,Ordering::Relaxed);let (tx,rx)=tokio::sync::oneshot::channel();state.pending.lock().unwrap().insert(id,tx);if let Err(e)=write(&state.input,json!({"id":id,"method":method,"args":args})){state.pending.lock().unwrap().remove(&id);return Err(e)}
+ // Slow downloads can exceed the ordinary document-operation timeout. The
+ // downloader enforces an idle timeout and the child-exit handler drains rx.
+ if method=="downloadUpdate"||method=="installUpdate"{return rx.await.map_err(|_|"Desktop service stopped responding".to_string())?}
  match tokio::time::timeout(std::time::Duration::from_secs(1900),rx).await{Ok(Ok(r))=>r,_=>{state.pending.lock().unwrap().remove(&id);Err("Desktop service stopped responding".into())}}
 }
 #[tauri::command]
@@ -42,7 +45,10 @@ fn open_support_page(app:tauri::AppHandle)->Result<(),String>{
 }
 #[tauri::command]
 fn show_main(window:tauri::WebviewWindow)->Result<(),String>{window.show().map_err(|e|e.to_string())?;window.set_focus().map_err(|e|e.to_string())}
-fn main(){tauri::Builder::default().plugin(tauri_plugin_single_instance::init(|app,args,_cwd|{
+fn main(){
+ #[cfg(target_os = "linux")]
+ gtk::glib::set_prgname(Some("document-studio"));
+ tauri::Builder::default().plugin(tauri_plugin_single_instance::init(|app,args,_cwd|{
  let handle=app.clone();
  let _=app.run_on_main_thread(move||{if let Some(window)=handle.get_webview_window("main"){
   // Keep D-Bus callbacks nonblocking and do not reveal a loading first instance.
@@ -53,6 +59,9 @@ fn main(){tauri::Builder::default().plugin(tauri_plugin_single_instance::init(|a
  let window=app.get_webview_window("main").ok_or("Window unavailable")?;
  #[cfg(target_os = "linux")]
  wayland_window::track(&window)?;
+ if !app.path().app_config_dir()?.join(window_state_file()).is_file() {
+   window.maximize()?;
+ }
  if let Some(icon)=app.default_window_icon(){window.set_icon(icon.clone())?;}
  let root=if cfg!(debug_assertions){std::path::PathBuf::from(env!("CARGO_MANIFEST_DIR")).parent().unwrap().join("app-resources")}else{app.path().resource_dir()?.join("app-resources")};
  // Tauri returns a verbatim (\\?\) path on Windows. Node's entry-point

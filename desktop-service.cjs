@@ -19,6 +19,7 @@ const fs=require('node:fs/promises'),path=require('node:path'),{pathToFileURL,fi
 const {Store,atomicWrite}=require('./storage.cjs');
 const {DictionaryClient}=require('./dictionary-client.cjs');
 const {ImportManager,IMPORT_EXT}=require('./import-manager.cjs');
+const {ManualUpdater}=require('./app-update.cjs');
 const resourceRoot=__dirname;
 const importer=new ImportManager(resourceRoot,message=>win?.webContents.send('fte:import-progress',message));
 let store,settings={},current=null,pending=null,externalFile=null,changed=false,closing=false;
@@ -34,6 +35,12 @@ async function openFile(file){if(!file){const r=await dialog.showOpenDialog(win,
 
 async function start(){
  store=new Store(app.getPath('userData'));settings=await store.config();
+ const updater=new ManualUpdater({resourceRoot,dataDirectory:app.getPath('userData'),
+   onProgress:progress=>win.webContents.send('fte:update-progress',progress),
+   openWindowsInstaller:file=>native('repair',[file])});
+ register('checkForUpdate',()=>updater.check());
+ register('downloadUpdate',()=>updater.download());
+ register('installUpdate',()=>updater.install());
  const recoveryAvailable=await store.pendingRecovery();
  const dictionaries=new DictionaryClient(path.join(app.getPath('userData'),'dictionaries'));
  try{await dictionaries.select(settings.dictionary||'en-US');}catch{await dictionaries.select('en-US');}
@@ -88,7 +95,7 @@ async function start(){
  register('pdf',async (name,bytes)=>{const f=await choose(name);if(!f)return false;const data=Buffer.from(bytes);await atomicWrite(f,data);return true;});
  register('snapshot',async({id,body,recoverable=false})=>{validateBody(body);const name=await store.snapshot(id,body);if(recoverable===true)await store.setPendingRecovery({id,name});return name;});
  register('recoveries',()=>store.list());register('recover',({id,name})=>store.get(id,name));
- register('settings',async value=>{if(typeof value.autosave==='boolean')settings.autosave=value.autosave;if(['original','light','dark'].includes(value.theme)){settings.theme=value.theme;if(nativeTheme)nativeTheme.themeSource=value.theme==='light'?'light':'dark';}await persist();return settings;});
+ register('settings',async value=>{if(typeof value.autosave==='boolean')settings.autosave=value.autosave;if(['system','original','light','dark'].includes(value.theme)){settings.theme=value.theme;if(nativeTheme)nativeTheme.themeSource=value.theme==='original'?'dark':value.theme;}await persist();return settings;});
  register('confirm',async()=>{const r=await dialog.showMessageBox(win,{type:'question',buttons:['Save','Discard changes','Cancel'],defaultId:0,cancelId:2,message:'Save changes before continuing?'});return r.response;});
  register('dirty',value=>{changed=!!value;win.setTitle((changed?'● ':'')+'Document Studio');});
  register('recent',async index=>{if(index===undefined)return settings.recents||[];const f=(settings.recents||[])[index];if(!f)throw Error('Recent file unavailable');return openFile(f);});

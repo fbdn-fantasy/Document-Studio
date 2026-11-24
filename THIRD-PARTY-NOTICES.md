@@ -32,7 +32,7 @@ Locally bundled browser libraries:
 - JsBarcode 3.12.1 — MIT
 - html2canvas 1.4.1 — MIT
 
-See `assets/vendor/*LICENSE*` and retained source notices. esbuild and @sparticuz/chromium are build/test dependencies, not runtime services. Document Studio source is distributed under the enclosed Apache License, Version 2.0.
+See `assets/vendor/*LICENSE*` and retained source notices. esbuild and @sparticuz/chromium are build/test dependencies. Document Studio V1.0.0 is licensed under the GNU Affero General Public License version 3 only. See the enclosed LICENSE and NOTICE.
 
 ## 2026-11-01 finishing update
 

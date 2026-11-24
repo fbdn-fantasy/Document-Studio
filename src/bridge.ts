@@ -5,8 +5,8 @@ import {parsePageRange,printGeometry,type PrintOptions} from './print-settings';
 type Callback=(value:unknown)=>void;
 declare global {interface Window {documentStudioDesktop:Record<string,unknown>}}
 export async function installBridge(requestPrintOptions:(total:number)=>Promise<PrintOptions|null>){
- const commands=new Set<Callback>();const progress=new Set<Callback>();
- await listen<{event:string,payload:unknown}>('service-event',({payload:m})=>{if(m.event==='command'&&m.payload==='close'&&!commands.size){void invoke('finish_close');return;}for(const fn of m.event==='command'?commands:m.event==='import-progress'?progress:[])fn(m.payload);});
+ const commands=new Set<Callback>();const progress=new Set<Callback>();const updateProgress=new Set<Callback>();
+ await listen<{event:string,payload:unknown}>('service-event',({payload:m})=>{if(m.event==='command'&&m.payload==='close'&&!commands.size){void invoke('finish_close');return;}for(const fn of m.event==='command'?commands:m.event==='import-progress'?progress:m.event==='update-progress'?updateProgress:[])fn(m.payload);});
  const call=(method:string,args:unknown[]=[])=>invoke('desktop_command',{method,args:JSON.parse(JSON.stringify(args,(_key,value)=>ArrayBuffer.isView(value)?Array.from(value as unknown as ArrayLike<number>):value))}).then(result=>{
   if(result&&typeof result==='object'&&!Array.isArray(result)){const value=result as Record<string,unknown>;for(const key of ['bytes','docx'])if(Array.isArray(value[key]))value[key]=new Uint8Array(value[key] as number[]);}
   return result;
@@ -19,6 +19,10 @@ export async function installBridge(requestPrintOptions:(total:number)=>Promise<
  return Array.from(new Uint8Array(pdf!.output('arraybuffer')));};
  const api:Record<string,unknown>={};
  api.openSupportPage=()=>invoke('open_support_page');
+ api.checkForUpdate=()=>call('checkForUpdate');
+ api.downloadUpdate=()=>call('downloadUpdate');
+ api.installUpdate=()=>call('installUpdate');
+ api.onUpdateProgress=(fn:Callback)=>{updateProgress.add(fn);return()=>updateProgress.delete(fn);};
  for(const name of ['addPersonal','suggestCJK','analyzeCJK','documentInfo','init','ackRecovery','open','chooseImport','runImport','cancelImport','importHealth','repairImport','commitOpen','save','export','snapshot','recoveries','recover','settings','confirm','dirty','recent','openMedicalSource','dictionaries','dictionary','importDictionary','fonts','spell','spellSuggestions'])api[name]=(...args:unknown[])=>call(name,args);
  api.saveDocument=async(value:{format:string,bytes?:number[]})=>call('saveDocument',[value.format==='pdf'?{...value,bytes:await pdfBytes()}:value]);
  api.pdfBytes=pdfBytes;api.pdf=async(name:string)=>call('pdf',[name,await pdfBytes()]);

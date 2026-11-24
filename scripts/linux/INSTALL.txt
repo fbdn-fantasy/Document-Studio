@@ -18,6 +18,8 @@ Launch Document Studio from the applications menu or run document-studio
 from the installation prefix's bin directory. For a custom prefix, add its
 bin directory to PATH and its share directory to XDG_DATA_DIRS.
 
-To update a tar installation, close Document Studio and run the new installer
-with the same prefix. It verifies the package checksum before switching versions.
-Installed versions live under lib/document-studio/releases in that prefix.
+Use the update button in the editor footer to check GitHub for a newer release.
+System-wide updates use pkexec from polkit to request permission to install.
+You can also close Document Studio and run a new installer with the same prefix.
+The installer verifies the payload checksum before switching versions. Installed
+versions live under lib/document-studio/releases in that prefix.
